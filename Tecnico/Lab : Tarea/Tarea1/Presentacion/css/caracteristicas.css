@@ -1,0 +1,41 @@
+
+#MainDivImage {
+  text-align: center;
+  display: inline-block;
+  width: 50%;
+}
+#MainDivText {
+  padding: 10px;
+  margin: 0 auto;
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+
+}
+#MainDivImage p {
+    color: #17202A;
+    text-align: center;
+}
+#MainDivImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 50px auto;
+}
+#MainDivText ul {
+  color: #17202A;
+  position: relative;
+  text-align: justify;
+  font-family: tahoma;
+}
+#MainDivText p {
+  color: #17202A;
+  position: relative;
+  text-align: justify;
+  font-family: tahoma;
+}
+#MainDivText h1 {
+  color: #6E2C00;
+  text-align: justify;
+  font-family: tahoma;
+}

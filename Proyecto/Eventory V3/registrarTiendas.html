@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registrar tiendas</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/templateRegistrar.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <img src="imgs/eventory-app-logo.png" alt="logoEventory" height="50" width="200">
+
+      <!-- Form de registro de tiendas -->
+      <form id="Form" onsubmit="return validar(this)"  enctype="multipart/form-data">
+
+        <h1>Ingrese la información de la tienda</h1>
+        <div class="EntradaDeTexto">
+          <input id= "txtCedulaJuridica" type="number" required="" name="txtCedulaJuridica"  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtCedulaJuridica" name="LabelPlaceHolder">Cédula jurídica</label>
+          <i class="fa fa-barcode fa-2x" name="LabelIcon"></i>
+        </div>
+        <!-- input para el nombre de la tienda  -->
+        <div class="EntradaDeTexto">
+          <input id= "txtNombreTienda"           type="text" required=""   name="txtNombreTienda"            value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtNombreTienda"           name="LabelPlaceHolder">Nombre de la tienda</label>
+          <i class="fa fa-building fa-2x" name="LabelIcon"></i>
+        </div>
+          <!-- input para el numero telefonico de la tienda  -->
+        <div class="EntradaDeTexto">
+          <input id= "txtTelefonoTienda" type="number" required="" name="txtTelefonoTienda"  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtTelefonoTienda" name="LabelPlaceHolder">Número telefónico</label>
+          <i class="fa fa-phone fa-2x" name="LabelIcon"></i>
+        </div>
+          <!-- input para el correo electronico de la tienda  -->
+        <div class="EntradaDeTexto">
+          <input id= "txtCorreoTienda"            type="email" required=""  name="txtCorreoTienda"             value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtCorreoTienda"            name="LabelPlaceHolder">Correo electrónico</label>
+          <i class="fa fa-envelope-o fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto">
+          <input id= "txtProvinciaTienda"           type="text" required=""   name="txtProvinciaTienda"            value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtProvinciaTienda"           name="LabelPlaceHolder">Provincia</label>
+          <i class="fa fa-globe fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto">
+          <input id= "txtCantonTienda"           type="text" required=""   name="txtCantonTienda"            value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtCantonTienda"           name="LabelPlaceHolder">Cantón</label>
+          <i class="fa fa-globe fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto">
+          <input id= "txtDistritoTienda"           type="text" required=""   name="txtDistritoTienda"            value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtDistritoTienda"           name="LabelPlaceHolder">Distrito</label>
+          <i class="fa fa-globe fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto">
+          <input id= "txtImpuestoVentaTienda" type="number" required="" name="txtImpuestoVentaTienda"  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])">
+          <label for="txtImpuestoVentaTienda" name="LabelPlaceHolder">Impuesto de venta</label>
+          <i class="fa fa-money fa-2x" name="LabelIcon"></i>
+        </div>
+
+
+        <div class="ComboBox">
+          <label for="txtTipoTienda" class="LabelActivo" name="LabelPlaceHolder">Tipo de tienda</label>
+          <select id="txtTipoTienda" name="txtTipoTienda">
+            <option value="Almacen">Almacén</option>
+            <option value="Showroom">Showroom</option>
+            <option value="Stand ferial">Stand ferial</option>
+            <option value="Mercadillo">Mercadillo</option>
+            <option value="Establecimiento multimarca">Establecimiento multimarca</option>
+            <option value="Franquicia">Franquicia</option>
+            <option value="Outlet">Outlet</option>
+            <option value="Departamental">Departamental</option>
+            <option value="Supermercado">Supermercado</option>
+            <option value="Centro comercial">Centro comercial</option>
+            <option value="Mall">Mall</option>
+          </select>
+          <i class="fa fa-list fa-2x" name="LabelIcon"></i>
+        </div>
+          <!-- mapa de captura de latitud y longitud  -->
+        <div id='mapa'></div>
+          <!-- boton el registro de la tienda  -->
+
+
+        <div class="ContenedorSubirArchivo">
+          <h2>Logo de tienda</h2>
+          <input id="SubirFoto" class="SubirAchivo" required="" accept="image/jpeg,image/png" name="SubirFoto" type="file" />
+          <label for="SubirFoto">
+            <span>Subir logo</span>
+          </label>
+        </div>
+        <input type="submit" name="Enviar" id="btnRegistrar" value="Enviar" >
+    </form>
+    </main>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <script src="js/templateRegistrar.js"></script>
+    <script src="js/registrarTiendas.js"></script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZn-mYepPk1HEeRpSM7jr_WQWXn4YUqcg&callback=funcionInicializarMapa">
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!--****************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*****************************************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crear lista</title>
+    <link rel="shortcut icon" href="imgs/carrito.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/bitacoraErrores.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Lista de compras</h1>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Inicio</li></a>
+          <a href="crearLista.html"><li>Crear lista</li></a>
+          <a href="desplegarLista.html"><li>Ver lista</li></a>
+          <a href="bitacoraErrores.html"><li>Bitácora de errores</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Bitácora de errores</h2>
+      <!--Tabla de listas -->
+      <table id="TablaErrores">
+        <thead>
+          <tr>
+            <th>Error</th>
+            <th>Screenshot de la consola</th>
+            <th>Screenshot del código</th>
+            <th>Solución</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Retorno de valor nulo por intentar extraer el valor de un elemento previamente obtenido.</td>
+            <td><img src="imgs/bitacoraErrores/error1.PNG" alt="Error1" /></td>
+            <td><img src="imgs/bitacoraErrores/error1-razon.PNG" alt="Solucion1" /></td>
+            <td>Olvido de agregar el selector para IDs en la función querySelector, por lo que se agrego la etiqueta '#' para solucionarlo.</td>
+          </tr>
+
+          <tr>
+            <td>Debido a la copia de las listas desde el documento pdf el formato del semicolon no era el correcto para el código.</td>
+            <td><img src="imgs/bitacoraErrores/error3.PNG" alt="Error2" /></td>
+            <td><img src="imgs/bitacoraErrores/error3-razon.PNG" alt="Solucion2" /></td>
+            <td>Se reemplazó el semicolon de los arrays copiados por el de formato correcto ';'</td>
+          </tr>
+          <tr>
+            <td>La obtención del parámetro por medio del nombre 'this' causo un error de interpretación por parte del código.</td>
+            <td><img src="imgs/bitacoraErrores/error4.PNG" alt="Error3" /></td>
+            <td><img src="imgs/bitacoraErrores/error4-razon.PNG" alt="Solucion3" /></td>
+            <td>Se cambió el nombre del parametro por vThis para solucionar el problema.</td>
+          </tr>
+          <tr>
+            <td>Confusión entre 'set' y 'add' para la función setAttribute.</td>
+            <td><img src="imgs/bitacoraErrores/error5.PNG" alt="Error4" /></td>
+            <td><img src="imgs/bitacoraErrores/error5-razon.PNG" alt="Solucion4" /></td>
+            <td>Se cambió addAttribute por setAttribute.</td>
+          </tr>
+          <tr>
+            <td>Se duplicó el js pero no se hizo el cambio del ID referenciado en el querySelector.</td>
+            <td><img src="imgs/bitacoraErrores/error6.PNG" alt="Error6" /></td>
+            <td><img src="imgs/bitacoraErrores/error6-razon.PNG" alt="Solucion6" /></td>
+            <td>Se realizó el cambio por el Id correcto.</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <h3>Gary Valverde Hampton</h3>
+    </footer>
+  </body>
+  <script src="js/general.js"></script>
+</html>

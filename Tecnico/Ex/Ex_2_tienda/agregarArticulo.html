@@ -1,0 +1,63 @@
+<!--****************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 3 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*****************************************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crear lista</title>
+    <link rel="shortcut icon" href="imgs/carrito.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/agregarArticulo.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Lista de compras</h1>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Inicio</li></a>
+          <a href="crearLista.html"><li>Crear lista</li></a>
+          <a href="desplegarLista.html"><li>Ver lista</li></a>
+          <a href="bitacoraErrores.html"><li>Bitácora de errores</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Agregar articulo</h2>
+      <!--Tabla de listas -->
+      <!--Formulario de creacion de listas -->
+      <form id="formAgregarArticulo" onsubmit="return validar()">
+        <!--Conjunto para ingresar el tipo de articulo -->
+        <label for="cbxTipoArticulo">Tipo de artículo</label>
+          <select id="cbxTipoArticulo" name="TipoArticulo" onchange="CargarArticulos(this.value, this)">
+          </select>
+        <!--Conjunto para ingresar el articulo -->
+        <label for="cbxArticulo">Artículo</label>
+          <select id="cbxArticulo" name="cbxArticulo" onchange="this.classList.remove('ErrorValidacion');">
+          </select>
+        <!--Conjunto para ingresar la cantidad de articulo -->
+        <label for="txtCantidad">Cantidad</label>
+          <input type="text" name="txtCantidad" id="txtCantidad" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <input type="submit" name="Agregar" value="Agregar">
+      </form>
+    </main>
+    <footer>
+      <h3>Gary Valverde Hampton</h3>
+    </footer>
+  </body>
+  <script src="js/general.js"></script>
+  <script src="js/agregarArticulo.js"></script>
+</html>

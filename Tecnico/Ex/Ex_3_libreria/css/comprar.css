@@ -1,0 +1,143 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos para crear lista
+
+*******************************************************************************/
+
+
+#formCrearLista {
+  margin-left: 75px;
+  width: 430px;
+  vertical-align: top;
+  display: inline-block;
+}
+#formCrearLista input:not([type="submit"]) {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+  font-size: 18px;
+  font-family: 'RigoB';
+  margin: 15px 0;
+}
+#formCrearLista label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  font-size: 18px;
+  font-family: 'RigoB';
+  color: #494949;
+}
+#formProceder {
+  margin: 30px auto;
+  display: block;
+  width: 430px;
+  vertical-align: top;
+}
+#formProceder label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  font-size: 18px;
+  font-family: 'RigoB';
+  color: #494949;
+}
+#formProceder input[type="submit"] {
+  color: #F6FDF9;
+  font-family: 'RigoB';
+  background: #278CDA;
+  padding: 6px;
+  width: 125px;
+  border: none;
+  border-radius: 2px;
+  margin: 20px auto;
+  display: block;
+}
+#formProceder input[type="submit"]:active {
+  background: #0459A7 !important;
+}
+#formProceder input[type="submit"]:hover {
+  background: #49AEFC;
+}
+#formProceder select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 0 auto;
+}
+#formCrearLista input[type="submit"] {
+  color: #F6FDF9;
+  font-family: 'RigoB';
+  background: #278CDA;
+  padding: 6px;
+  width: 125px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 75px;
+  float: right;
+}
+#formCrearLista input[type="submit"]:active {
+  background: #0459A7 !important;
+}
+#formCrearLista input[type="submit"]:hover {
+  background: #49AEFC;
+}
+#formCrearLista select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 10px 0;
+}
+/****************************************
+  Estilo para tablas
+****************************************/
+#TablaCompras {
+  font-family: 'RigoB';
+  font-size: 14px;
+  margin: 0 auto;
+}
+#TablaCompras thead tr th {
+  vertical-align: middle;
+  width: 150px;
+  height: 40px;
+  color: #DDDDDD;
+  background: #5B5B5B;
+  border: 1px solid #E2E2E2;
+}
+#TablaCompras tbody tr td {
+color: #606060;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 300;
+  padding: 0 8px;
+  width: 132px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+}
+#TablaCompras tbody tr td a {
+  text-decoration: none;
+  color: #606060;
+}
+#TablaCompras tbody tr td a:hover {
+  text-decoration: underline;
+}
+#TablaCompras tbody tr:nth-child(even) td {
+  background: #EEEEEE;
+}

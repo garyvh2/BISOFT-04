@@ -1,0 +1,119 @@
+<!--****************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Proveniente del proyecto EVENTORY
+
+  Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.
+
+*****************************************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Librería HELIOS</title>
+    <link rel="shortcut icon" href="imgs/logo.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/factura.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <div id="Empresa">
+        <div>
+          <p id="NombreEmpresa">Librería HELIOS</p>
+          <p id="DireccionEmpresa">San Sebastian, San Jose, Central</p>
+          <p>Tel: <span id="TelefonoEmpresa">86013609</span></p>
+          <p>Ced Jur: <span id="CedulaEmpresa">11682198293</span></p>
+        </div>
+        <div>
+          <div id="LogoEmpresa">
+            <img src="imgs/logo.png" alt="Logotipo" />
+          </div>
+        </div>
+      </div>
+      <div id="DatosFactura">
+        <div>
+          <h2 id="IdUsuarioFactura">Gary A. Valverde Hampton</h2>
+          <h3 id="RolUsuarioFactura">Administrador</h3>
+        </div>
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td>Fecha: #</td>
+              <td id="FechaFactura"></td>
+            </tr>
+            <tr>
+              <td>Comprador:</td>
+              <td ><input id="CompradorFactura" type="text" name="name" placeholder="Comprador"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="Items">
+        <table>
+          <thead>
+            <tr>
+              <th>Libro</th>
+              <th>Version</th>
+              <th>Cantidad</th>
+              <th>Valor</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div id="TotalesFactura">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td>Sub total</td>
+              <td id="SubTotalFactura"></td>
+            </tr>
+            <tr>
+              <td>Descuento (<span id="DescuentoFactura"></span>%)</td>
+              <td id="DescuentoFacturaTotal"></td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td id="TotalFactura"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Librería HELIOS</h2>
+      <hr>
+      <h3>Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.</h3>
+    </main>
+    <footer>
+      <div class="Cancelar" onclick="window.history.back();">
+        <p>
+          Cancelar
+        </p>
+      </div>
+      <div class="Aceptar" onclick="Aceptar()">
+        <p>
+          Aceptar
+        </p>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/factura.js"></script>
+  </body>
+  <footer>
+
+  </footer>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><!-- NOTE Aca tiene que ir el nombre del modificar --></title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/templateAdmin.css">
+    <link rel="stylesheet" href="css/templateModificar.css">
+  </head>
+  <body>
+    <header>
+      <div id="Logotipo">
+        <img src="imgs/logoblanco.png" alt="Logo" title="Logo" width="40px" height="40px"/>
+      </div>
+      <div id="Navegacion">
+        <ul id="ListaNavegacion">
+          <a href="listarTiendas.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a href="listarMisListas.html"><li>Mis listas</li></a>
+        </ul>
+      </div>
+      <div id="MenuUsuario">
+        <div id="BotonMenuUsuario">
+          <div></div>
+          <h2>Gary Valverde</h2>
+          <span id="Flecha"></span>
+        </div>
+        <ul id="ListaMenuUsuario">
+          <li onclick="IrAlPerfil()">Perfil<i class="fa fa-user"></i></li>
+          <li onclick="CerrarSesion()">Cerrar sesión<i class="fa fa-times"></i></li>
+        </ul>
+      </div>
+    </header>
+    <aside>
+      <div id="FotoPerfil">
+        <div>
+          <div id="FotoPerfilInformacion">
+            <div id="Foto"></div>
+            <div id="Informacion">
+              <h4 id="TipoUsuarioInformacionPerfil">Administrador</h4>
+              <hr>
+              <h4 id="TiendaInformacionPerfil">Walmart</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="MenuLateral">
+        <ul>
+          <li id="Cajero" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Cajero BotonMenuLateraActivo">
+              <i class="fa fa-usd fa-2x"></i>
+              <h3>Cajero</h3>
+            </div>
+            <ul  class="SubMenuLateral SubMenuLateraActivo">
+              <a href="registrarProveedor.html"><li>Pago de producto</li></a>
+              <a href="listarProductosAdmin.html"><li>Lista de productos</li></a>
+            </ul>
+          </li>
+          <li id="Servicio" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Servicio">
+              <i class="fa fa-volume-control-phone fa-2x"></i>
+              <h3>Servicio al cliente</h3>
+            </div>
+            <ul  class="SubMenuLateral">
+              <a href="activarListas.html"><li>Activar lista</li></a>
+              <a href="listarProductosAdmin.html"><li>Lista de productos</li></a>
+              <a href="registroUsuariosPorAdministrador.html"><li>Registrar usuarios</li></a>
+            </ul>
+          </li>
+          <li id="Inventario" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Inventario ">
+              <i class="fa fa-archive fa-2x"></i>
+              <h3>Inventario</h3>
+            </div>
+            <ul  class="SubMenuLateral">
+              <a href="agregarInventario.html"><li>Agregar inventario</li></a>
+              <a href="registrarProducto.html"><li>Registrar productos</li></a>
+              <a href="registrarTipoProducto.html"><li>Registrar tipos de producto</li></a>
+              <a href="listarProductosAdmin.html"><li>Lista de productos</li></a>
+              <li>Desactivar</li>
+              <li>Modificar</li>
+            </ul>
+          </li>
+          <li id="Proveedores" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Proveedores">
+              <i class="fa fa-truck fa-2x"></i>
+              <h3>Proveedores</h3>
+            </div>
+            <ul  class="SubMenuLateral">
+              <a href="registrarProveedor.html"><li>Registrar</li></a>
+              <li>Desactivar</li>
+              <li>Modificar</li>
+            </ul>
+          </li>
+          <li id="Reportes" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Reportes">
+              <i class="fa fa-list fa-2x"></i>
+              <h3>Reportes</h3>
+            </div>
+            <ul  class="SubMenuLateral">
+              <li>Productos por lista</li>
+              <li>Productos por proveedor</li>
+              <li>Eventos</li>
+              <li>Listas</li>
+            </ul>
+          </li>
+          <li id="Configuracion" onclick="MenuLateralActivo(this.id)">
+            <div class="BotonMenuLateral Configuracion">
+              <i class="fa fa-cog fa-2x"></i>
+              <h3>Configuración</h3>
+            </div>
+            <ul  class="SubMenuLateral">
+              <li>Datos tienda</li>
+              <a href="registroUsuariosPorAdministrador.html"><li>Registrar usuarios</li></a>
+              <a href="registrarTipoEvento.html"><li>Eventos</li></a>
+              <li>Convenio</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <!--NOTE esto no se toca es solo para los filtros -->
+      <div id="InputFiltros">
+        <div class="EntradaDeTexto BuscarId">
+          <input type="number" id="txtBuscarId" name="txtBuscarId" required=""  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])" maxlength="50">
+          <label for="txtBuscarId" name="LabelPlaceHolder" >Buscar por id:</label>
+          <i class="fa fa-search fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto BuscarNombre">
+          <input type="text" id="txtBuscarNombre" name="txtBuscarNombre" required=""  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])" maxlength="50">
+          <label for="txtBuscarNombre" name="LabelPlaceHolder" >Buscar por nombre:</label>
+          <i class="fa fa-search fa-2x" name="LabelIcon"></i>
+        </div>
+      </div>
+      <!--NOTE esto no se toca es solo para los botones de mostar inactivos y activos -->
+      <div id="BotonesEstado">
+        <input class="Activo" type="button" name="EstadoTipo" id="btnActivo" onclick="CargarLista(1)" value="Activos" />
+        <input type="button" name="EstadoTipo" id="btnInactivo" onclick="CargarLista(0)" value="Inactivos" />
+      </div>
+      <h1>Usuarios</h1>
+      <table id="TablaDeElementos" class="Tabla">
+        <thead>
+          <tr>
+            <!--NOTE esto lo tienen que cambiar dependiendo de los campos que en verdad importen para identificar el elemento -->
+            <th>Nombre</th>
+            <th>Segundo nombre</th>
+            <th>Tipo usuario</th>
+            <!--NOTE no tocar -->
+            <th class="botonesListaTH">Modificar</th>
+            <th class="botonesListaTH">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <!--NOTE esto no se toco es solo para linkear hacia el agregar del elemento -->
+      <input  type="button" name="Agregar" id="btnEnviar" onclick="Agregar()" value="Agregar" />
+    </main>
+    <footer>
+      <span id="IrArriba" class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x fa-3x"></i>
+        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+      </span>
+    </footer>
+    <section id="ModificarDatos" class="ModificarDatos">
+      <div class="Contenedor">
+        <form onsubmit="return ModificarElemento()">
+          <h1>Modificar datos de la lista de eventos</h1>
+
+          <div class="EntradaDeTexto">
+            <input type="text" id="txtNombreEvento" name="txtNombreEvento" required=""  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])" >
+            <label for="txtNombreEvento" class="LabelActivo" name="LabelPlaceHolder">Nombre del evento:</label>
+             <i class="fa fa-archive fa-2x" name="LabelIcon"></i>
+          </div>
+          <div class="EntradaDeTexto">
+            <input id= "txtFechaEvento"   type="date" 		required=""			   name="txtFechaEvento"            value="" onfocusout="">
+            <label for="txtFechaEvento" class="LabelActivo"  class="LabelActivo"     name="LabelPlaceHolder">Fecha del evento:</label>
+            <i class="fa fa-calendar fa-2x" name="LabelIcon"></i>
+          </div>
+          <div class="ComboBox">
+            <label for="txtTipoEvento" class="LabelActivo"  name="LabelPlaceHolder" >Tipo de evento:</label>
+             <select id="txtTipoEvento" required="" name="txtTipoEvento">
+
+            </select>
+            <i class="fa fa-list-ul fa-2x" name="LabelIcon"></i>
+          </div>
+          <div class="BotonesMarcables">
+            <label>
+              <input id="chkEnvio" name="Perecedero" type="checkbox"  value="Envio" onclick="checkboxEnvio(this)">
+              <i class="fa fa-circle-thin" name="CheckBoton"></i>
+              <i class="fa fa-truck fa-2x" name="IconoOpcional"></i>
+              <h4>Envío</h4>
+            </label>
+          </div>
+          <div id="mapWrapper" class="MapaOculto BotonesMarcables">
+            <h2>Dirección del evento</h2>
+            <div id="mapa"></div>
+          </div>
+
+          <input type="submit" name="Enviar" id="btnEnviar" value="Enviar" />
+        </form>
+      </div>
+    </section>
+  </body>
+  <script src="js/jquery.js"></script>
+  <!--NOTE esto se cambia por el nombre del js de ustedes, cada quien le ponen el nombre dependeindo de la vara
+    el codigo interno es el mismo pero cambia ligeramente -->
+  <script src="js/template_4_casos.js"></script>
+  <script src="js/templateAdmin.js"></script>
+
+</html>

@@ -1,0 +1,38 @@
+.ImagenesDelPerfil {
+  border: 6px solid #272b2e;
+  display: block;
+  margin: 0 auto;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../imgs/404.jpg");
+
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.7);
+}
+#mapa {
+  margin: 0 auto;
+  width: 600px;
+  position: relative;
+  right: 50px;
+  height: 400px;
+  pointer-events: none;
+}
+main hr {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border: 1px solid #ececec;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 50px 0;
+}
+input[readonly], select[disabled="true"]{
+  border: none !important;
+  background: #eee;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,4 @@
+error 1
+  Uncaught TypeError: Cannot read property 'value' of null
+error 2
+  Olvido del formato para push de un array

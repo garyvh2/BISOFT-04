@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Iniciar sesión</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/iniciarSesion.css">
+</head>
+
+  <body>
+      <header>
+          <div class="Back" onclick="window.location='index.html';">
+              <p>
+                  Atrás
+              </p>
+          </div>
+      </header>
+      <main>
+          <img src="imgs/eventory-app-logo.png" alt="logoEventory" height="50" width="200">
+          <div id="login">
+              <h1>Ingresar</h1>
+              <input type="email" name="email" placeholder="Correo Electronico" id="correoElectronico">
+
+              <input type="password" name="contrasena" placeholder="Contraseña" id="contrasena">
+              <div id="login_inferior">
+
+                  <button type="button" id="IniciarSesion">Iniciar sesión</button>
+                  <button type="button" id="botonRegistrar" onclick="window.location='registrarCliente.html';">Registrarse</button>
+                  <a onclick="CambiarContrasenna()" href="#">¿Olvidó su contraseña?</a>
+
+
+              </div>
+
+          </div>
+      </main>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/iniciarSesion.js"></script>
+
+</html>

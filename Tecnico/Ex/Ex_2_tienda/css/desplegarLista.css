@@ -1,0 +1,53 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos para desplegar lista
+
+*******************************************************************************/
+/****************************************
+  Estilo para tablas
+****************************************/
+#TablaListas {
+  font-family: 'RigoB';
+  font-size: 14px;
+  margin: 0 auto;
+}
+#TablaListas thead tr th {
+  vertical-align: middle;
+  width: 150px;
+  height: 40px;
+  color: #DDDDDD;
+  background: #5B5B5B;
+  border: 1px solid #E2E2E2;
+}
+#TablaListas tbody tr td {
+color: #606060;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 300;
+  padding: 0 8px;
+  width: 132px;
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E2E2E2;
+}
+#TablaListas tbody tr td a {
+  text-decoration: none;
+  color: #606060;
+}
+#TablaListas tbody tr td a:hover {
+  text-decoration: underline;
+}
+#TablaListas tbody tr:nth-child(even) td {
+  background: #EEEEEE;
+}

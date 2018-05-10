@@ -1,0 +1,91 @@
+#BotonesEstado {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+input[name="EstadoTipo"] {
+  display: inline-block;
+  margin: 0 20px;
+}
+#InputFiltros {
+  text-align: center;
+}
+.BuscarId {
+  display: inline-block;
+  vertical-align: middle;
+}
+.BuscarNombre {
+  display: inline-block;
+  vertical-align: middle;
+}
+.EntradaDeTexto {
+  margin: 50px;
+  width: auto;
+}
+.EntradaDeTexto input {
+  width: 430px !important;
+}
+i[name="LabelIcon"] {
+    left: -498px;
+}
+.Activo {
+  transition: .1s ease;
+  color: #fff !important;
+  background: #aac246 !important;
+  border: 2px solid #aac246 !important;
+}
+.botonesLista {
+  width: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.botonesLista:hover {
+  background: #eef689 !important;
+}
+.botonesListaTH {
+  width: 50px;
+  text-align: center;
+}
+.ModificarDatos {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
+}
+.Contenedor {
+  padding: 40px;
+  width: 60%;
+  height: auto;
+  background: #fff;
+  border-radius: 30px;
+  margin: 40px auto;
+}
+section .EntradaDeTexto {
+  width: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+section .Date {
+  width: 500px;
+  margin: 20px auto;
+  position: relative;
+
+}
+
+section .ComboBox {
+  width: 500px;
+  margin: 20px auto;
+  position: relative;
+}
+section .ComboBox select {
+  width: 445px;
+}
+section .BotonesMarcables {
+  width: 200px;
+  margin: 20px auto;
+  position: relative;
+}

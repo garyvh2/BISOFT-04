@@ -1,0 +1,74 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos para crear lista
+
+*******************************************************************************/
+
+main img{
+  /* Este es un filtro para rotar la imagen de izquierda  a derecha */
+  transform: scaleX(-1);
+  filter: FlipH;
+  display: inline-block;
+  vertical-align: top;
+}
+#formAgregarArticulo {
+  position: relative;
+  left: -65px;
+  margin: 0 auto;
+  width: 480px;
+  vertical-align: top;
+  display: block;
+}
+#formAgregarArticulo input:not([type="submit"]) {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+  font-size: 18px;
+  font-family: 'RigoB';
+  margin: 10px 0;
+}
+#formAgregarArticulo select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 250px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 10px 0;
+}
+#formAgregarArticulo label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 220px;
+  font-size: 18px;
+  font-family: 'RigoB';
+  color: #494949;
+}
+#formAgregarArticulo input[type="submit"] {
+  color: #F6FDF9;
+  font-family: 'RigoB';
+  background: #278CDA;
+  padding: 6px;
+  width: 125px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 55px;
+  float: right;
+}
+#formAgregarArticulo input[type="submit"]:active {
+  background: #0459A7 !important;
+}
+#formAgregarArticulo input[type="submit"]:hover {
+  background: #49AEFC;
+}

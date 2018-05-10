@@ -1,0 +1,82 @@
+body {
+	background: #D4E6F1;
+}
+header {
+	background: #154360;
+	box-shadow: 0px 1px 25px #5499C7;
+}
+header div {
+	background: #1A5276;
+	box-shadow: 0px 1px 15px #17202A;
+}
+header div nav a {
+	color: #17202A;
+}
+
+header div nav > a:hover {
+	background: #1F618D;
+	color: #1B2631;
+}
+header div nav #CurrentPage {
+	border-bottom: solid 4px #17202A;
+	background: #1F618D;
+}
+main h1 {
+	color: #1A5276;
+}
+section div {
+	background: #AEB6BF;
+}
+footer {
+	background: #FFF;
+}
+
+/* Table configurations */
+.firstCell {
+	border-top-right-radius: 12px;
+	border-top-left-radius: 12px;
+}
+.lastCell {
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 50px 0px;
+	margin: 30px auto;
+}
+table thead {
+	background: #000;
+}
+table thead tr {
+
+}
+table thead tr th {
+	padding: 6px;
+	color: #FFF;
+	box-shadow: 0px 1px 10px #000;
+	width: 220px;
+	height: 220px;
+	border-radius: 10px;
+}
+table thead tr th img {
+	width: 180px;
+	height: 180px;
+}
+table tbody {
+
+}
+tbody:before {
+  content: "-";
+  display: block;
+  line-height: 2em;
+  color: transparent;
+}
+table tbody tr td {
+	font-size: 18px;
+	width: 220px;
+	height: auto;
+	background: #85929E;
+	box-shadow: 0px 1px 10px #85929E;
+	padding: 16px;
+}

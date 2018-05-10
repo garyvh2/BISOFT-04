@@ -1,0 +1,368 @@
+//Se declara la latitud y longitud global
+var nLatitud, nLongitud, sDireccion, gmMarcador, gmMapa, gmVentanaInformacion;
+//Funcion llamada por API para inicializar el mapa
+function funcionInicializarMapa (latitud,longitud) {
+    document.querySelector('#mapa').style.pointerEvents = 'none';
+
+  //Se crea una instancia para el mapa
+  gmMapa = new google.maps.Map(document.querySelector('#mapa'), {
+      //Se establece el zoom
+      zoom: 16,
+      //Se centra el mapa a una ubicacion
+      center: new google.maps.LatLng(9.935, -84.092),
+      //Se establece el tipo del mapa
+      mapTypeId: google.maps.MapTypeId.HYBRID
+  });
+  //Se agregan opciones al mapa
+  var gmOpcionesMapa = {
+    //Se establece el zoom maximo
+    maxZoom:20,
+    //Se establece el zoom minimo
+    minZoom:14,
+    //Se deshabilita el uso de stree view
+    streetViewControl: false,
+    //Se deshabilita el control del tipo de mapa
+    mapTypeControl: false
+  }
+
+      nLatitud = latitud;
+      nLongitud = longitud;
+
+  //Se agregan las opciones al mapa
+  gmMapa.setOptions(gmOpcionesMapa);
+  //Se setea un marcador con una ubicacion por defecto
+  gmMarcador = new google.maps.Marker({
+      //Se agrega la posicion en San Jose
+      position: new google.maps.LatLng(nLatitud, nLongitud)//,
+      //Se habilita el arratre del marcador
+      //draggable: true
+  });
+  //Se centra el mapa en la posicion del marcador
+  gmMapa.setCenter(gmMarcador.position);
+  //Se coloca el marcador en el mapa
+  gmMarcador.setMap(gmMapa);
+  //Se obtiene una latitud y longitud por defecto
+  nLatitud = gmMarcador.position.lat();
+  nLongitud = gmMarcador.position.lng();
+  //Se agrega un evento para cuando se realiza un click en el mapa, de manera que el marcador se mueva a esa ubicacion
+  google.maps.event.addListener(gmMapa, 'click', function(event) {
+    gmNuevoMarcador = new google.maps.Marker({
+      //Se establece la posicion del marcador
+      position: event.latLng,
+      //Se establece el mapa donde se ubicara el marcador
+      map: gmMapa,
+      //Se establece la animacion del marcador
+      animation: google.maps.Animation.DROP
+    });
+    //Si no existe un marcador se le asigna el valor del actual sino entonces es actualizado
+    if (gmMarcador != undefined){
+      gmMarcador.setMap(null);
+    }
+    gmMarcador = gmNuevoMarcador;
+    var geocoder = new google.maps.Geocoder;
+
+    geocoder.geocode({'location': event.latLng}, function(results, status) {
+
+      if (status === google.maps.GeocoderStatus.OK) {
+        if (results[1]) {
+          var gmContenido = '<h2>' + results[1].formatted_address + '</h2>' + '<p>' + event.latLng + '</p>';
+          var gmVentanaInformacion = new google.maps.InfoWindow({
+            content: gmContenido
+          });
+          gmVentanaInformacion.open(gmMapa, gmMarcador);
+        } else {
+          window.alert('No results found');
+        }
+      } else {
+        window.alert('Geocoder failed due to: ' + status);
+      }
+    });
+    //Se almacena la latitud en una variable
+    nLatitud = event.latLng.lat();
+    //Se almacena la longitud en una variable
+    nLongitud = event.latLng.lng();
+  });
+}
+
+
+function checkboxEnvio (el) {
+  var elFechaCaducidad = document.querySelector('#mapWrapper');
+  if (el.checked == true) {
+    elFechaCaducidad.classList.remove("MapaOculto");
+  }
+  else {
+    elFechaCaducidad.classList.add("MapaOculto");
+  }
+}
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+cargarComboBox();
+function cargarComboBox () {
+  //Proveedores
+
+  var nIdListaEvento = getParameterByName("idLista");
+  var peticion = $.ajax({
+      url: "services/selectLista.php",
+      type: "POST",
+      data: {
+        'id_lista' : nIdListaEvento
+      },
+      contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+      dataType: 'json',
+      async: false,
+      timeout: 30000,
+
+
+      success: function(response){
+      	var nIdTienda = response[0]['id_tienda'];
+
+
+        var peticion2 = $.ajax({
+            url: "services/listarTiposEventos.php",
+            type: "POST",
+            data: {
+              'id_tienda' : nIdTienda
+            },
+            contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+            dataType: 'json',
+
+            success: function(response){
+              var elSelectProvedorProducto = document.querySelector("#txtTipoEvento");
+              for (var i = 0; i < response.length; i++) {
+                  var option = document.createElement('option');
+                    option.setAttribute("value", Number(response[i]['id']));
+                    var nodoDeTexto = document.createTextNode(response[i]['nombre']);
+                  option.appendChild(nodoDeTexto);
+                  elSelectProvedorProducto.appendChild(option);
+              }
+            },
+            error: function(request, error) {
+                alert(error);
+            }
+        });
+
+
+      },
+      error: function(request, error) {
+          alert(error);
+      }
+  });
+}
+
+function CargarInformacion () {
+  //Informacion evento"
+  var nIdListaEvento = getParameterByName("idLista");
+
+
+  var peticion = $.ajax({
+      url: "services/selectLista.php",
+      type: "POST",
+      data: {
+        'id_lista' : nIdListaEvento
+      },
+      contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+      dataType: 'json',
+
+      success: function(response){
+      	var txtNombreEvento=document.querySelector('#txtNombreEvento');
+        var txtFechaEvento=document.querySelector('#txtFechaEvento');
+        var txtTipoEvento=document.querySelector('#txtTipoEvento');
+        var chkEnvio=document.querySelector('#chkEnvio');
+        txtNombreEvento.value = response[0]['nombre'];
+        txtFechaEvento.value  = response[0]['fecha_evento'];
+        txtTipoEvento.value   = Number(response[0]['id_tipo_evento']);
+        if (Number(response[0]['envio']) == 0) {
+          chkEnvio.checked      = false;
+        } else {
+          chkEnvio.checked      = true;
+        }
+
+        checkboxEnvio(chkEnvio);
+        funcionInicializarMapa(response[0]['latitud'],response[0]['longitud']);
+        CargarDatosDeUsuario();
+      },
+      error: function(request, error) {
+          alert(error);
+      }
+  });
+  var peticion2 = $.ajax({
+            url: "services/listarProductosEnLista.php",
+            type: "POST",
+            data: {
+              'id_lista' : nIdListaEvento
+            },
+            contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+            dataType: 'json',
+
+            success: function(response){
+              //Productos en tienda
+              var elTablaListaDeProductosTBody = document.querySelector("#TablaListaDeProductos tbody");
+              elTablaListaDeProductosTBody.innerHTML = "";
+
+
+              nLength = response.length;
+              for (var i = 0; i < nLength; i++) {
+                  var elFila = document.createElement('tr');
+                  elFila.setAttribute("value", response[i]['id_producto']);
+                  elFila.setAttribute("estado", response[i]['estado']);
+                  elFila.setAttribute("cantidad", response[i]['cantidad']);
+                  elFila.setAttribute("onclick", "ReservarProducto(getAttribute('value'), getAttribute('estado'))");
+                  var ProductoEnLista = response[i]['id_producto'];
+
+                  var elCeldaCodigoProducto = document.createElement('td');
+                    var txtCodigoProducto = document.createTextNode(response[i]['id_producto']);
+                  var elCeldaEstadoProducto = document.createElement('td');
+                  if (Number(response[i]['estado']) == 1) {
+                    var txtEstadoProducto = document.createTextNode('No obsequiado');
+                  }else if (Number(response[i]['estado']) == 2) {
+                    var txtEstadoProducto = document.createTextNode('Reservado');
+                  }else if (Number(response[i]['estado']) == 3) {
+                    var txtEstadoProducto = document.createTextNode('Regalado');
+                  }
+                  var elCeldaCantidadProducto = document.createElement('td');
+                    var txtCantidadProducto = document.createTextNode(response[i]['cantidad']);
+                  //Dentro de for
+                  var elCeldaNombreProducto = document.createElement('td');
+                    var txtNombreProducto;
+                  var elCeldaMarcaProducto = document.createElement('td');
+                    var txtMarcaProducto;
+                  var elCeldaPrecioProducto = document.createElement('td');
+                    var txtPrecioProducto;
+
+
+                      txtNombreProducto = document.createTextNode(response[i]['nombre_producto']);
+                      txtMarcaProducto = document.createTextNode(response[i]['marca_producto']);
+                      txtPrecioProducto = document.createTextNode("₡" + response[i]['precio_producto']);
+
+                  elCeldaCodigoProducto.appendChild(txtCodigoProducto);
+                  elCeldaEstadoProducto.appendChild(txtEstadoProducto);
+                  elCeldaCantidadProducto.appendChild(txtCantidadProducto);
+                  elCeldaNombreProducto.appendChild(txtNombreProducto);
+                  elCeldaMarcaProducto.appendChild(txtMarcaProducto);
+                  elCeldaPrecioProducto.appendChild(txtPrecioProducto);
+
+                  elFila.appendChild(elCeldaCodigoProducto);
+                  elFila.appendChild(elCeldaNombreProducto);
+                  elFila.appendChild(elCeldaMarcaProducto);
+                  elFila.appendChild(elCeldaPrecioProducto);
+                  elFila.appendChild(elCeldaCantidadProducto);
+                  elFila.appendChild(elCeldaEstadoProducto);
+
+                  elTablaListaDeProductosTBody.appendChild(elFila);
+              }
+          },
+          error: function(request, error) {
+              alert(error);
+          }
+          });
+
+
+
+}
+
+function ReservarProducto (idProducto, estado) {
+  var nIdListaEvento = getParameterByName("idLista");
+
+  var NombreProducto;
+  var ImagenProducto;
+  var PrecioProducto;
+  var cantidadDisponible;
+
+
+  var peticion = $.ajax({
+
+      url: "services/selectDatosReserva.php",
+      type: "POST",
+      data: {
+        'id_producto'     : idProducto,
+        'id_lista_evento' : nIdListaEvento
+      },
+      contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+      dataType: 'json',
+      async: false,
+      timeout: 30000,
+
+      success: function(response){
+        NombreProducto      = response[0]['nombre_producto'];
+        ImagenProducto      = response[0]['image_path'];
+        PrecioProducto      = response[0]['precio_producto'];
+        cantidadDisponible  = response[0]['cantidad_disponible'];
+      },
+      error: function(request, error) {
+          alert(error);
+      }
+  });
+
+
+
+
+  var swalInnerText = "<h2>" + NombreProducto + "</h2>" + "<div id='ImagenReserva' style='background-image: url(" + ImagenProducto + ")'></div>" + "<h3 style='margin-bottom: 5px;'>Precio ₡" + PrecioProducto + "</h3>" + "<p>Ingrese la cantidad del producto que desea reservar y haga clic en aceptar. (La cantidad máxima de reserva para este producto es " + String(cantidadDisponible) + ")<p>";
+
+
+  if (estado == 1) {
+    swal({
+      title: "Reservar un producto",
+      text: swalInnerText,
+      type: "input",
+      html: true,
+      showCancelButton: true,
+      closeOnConfirm: false,
+      animation: "slide-from-top",
+      inputPlaceholder: "Cantidad"
+    }, function(inputValue){
+      if (inputValue === false)
+        return false;
+      if (inputValue === "") {
+        swal.showInputError("No puede dejar este espacio vacío");
+        return false
+      }
+      if (Number(inputValue) === 0) {
+        swal.showInputError("La cantidad ingresada debe ser mayor que 0");
+        return false
+      }
+      if (inputValue > cantidadDisponible) {
+        swal.showInputError("La cantidad ingresada es mayor a la permitida");
+        return false
+      } else {
+
+        var peticion = $.ajax({
+
+            url: "services/registrarReserva.php",
+            type: "POST",
+            data: {
+              'id_producto'     : idProducto,
+              'id_lista_evento' : nIdListaEvento,
+              'cantidad'      : inputValue,
+              'estado'          : 1
+            },
+            contentType: "application/x-www-form-urlencoded;charset=ISO-8859-15",
+            dataType: 'json',
+            async: false,
+            timeout: 30000,
+
+            success: function(response){
+
+              swal("La reserva ha sido realizada", "El código de reserva es " + response[0]['id_reserva'] + " puede encontrarlo en su lista de reservas.", "success");
+            },
+            error: function(request, error) {
+                alert(error);
+            }
+        });
+        CargarInformacion();
+
+      }
+    });
+
+  }
+
+}
+
+var elchkEnvio = document.querySelector("#chkEnvio");
+checkboxEnvio(elchkEnvio);

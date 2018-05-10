@@ -1,0 +1,753 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 08/07/2016
+  Fecha de modificacion: 08/07/2016
+
+  EVENTORY APP
+  2016
+
+  Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos Generales
+
+*******************************************************************************/
+.Advertencia {
+  color: #9F6000;
+  background-color: #FEEFB3;
+  border-radius: 4px;
+}
+.Informativo {
+  color: #00529B;
+  background-color: #BDE5F8;
+  border-radius: 4px;
+}
+.Informativo i {
+  margin:10px 22px;
+  font-size:2em;
+  display: inline-block;
+  vertical-align:middle;
+}
+.Informativo p {
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.Advertencia i {
+  margin:10px 22px;
+  font-size:2em;
+  display: inline-block;
+  vertical-align:middle;
+}
+.Advertencia p {
+  width: 90%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ImagenesDelPerfil {
+  border: 6px solid #272b2e;
+  display: block;
+  margin: 0 auto;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../imgs/404.jpg");
+
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.7);
+}
+input[readonly], select[disabled="true"]{
+  border: none !important;
+  background: #eee;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+}
+#mapWrapper{
+  width: 600px;
+  position: relative;
+}
+#mapa {
+  display: block;
+  width: 600px;
+  height: 400px;
+  border-radius: 4px;
+  background: transparent url("../imgs/ajax-loader-green.gif") no-repeat center center;
+}
+.MapaOculto {
+  height: 0px !important;
+}
+.MapaOculto h2 {
+  font-size: 0px !important;
+}
+.MapaOculto div {
+  opacity: 0;
+}
+body h1 {
+  text-indent: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #aac246;
+  margin-bottom: 20px;
+}
+main > p {
+  text-align: justify;
+  margin-bottom: 20px;
+  text-indent: 50px;
+}
+
+
+
+/****************************************
+  Estilo para tablas generales
+****************************************/
+.Tabla
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	border-spacing: 0 10px;
+	width: 100%;
+	text-align: left;
+	border-collapse: separate;
+	border: 1px solid #aac246;
+  margin-bottom: 20px;
+}
+.Tabla th
+{
+	padding: 15px 10px 10px 10px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.Tabla tbody
+{
+	background: #bbd357;
+}
+.Tabla td
+{
+	padding: 10px;
+	border-top: 1px dashed #fff;
+}
+.Tabla tbody tr:hover td
+{
+	background: #cce468;
+}
+
+
+/****************************************
+  Estilo para formularios
+****************************************/
+form > *{
+  margin: 25px auto;
+}
+
+.EntradaDeTexto {
+  width: 600px;
+  position: relative;
+}
+i[name="LabelIcon"] {
+  padding: 10px 0;
+  color: #abb4bb;
+  margin-right: 5px;
+  position: relative;
+  left: -565px;
+  top: 5px;
+}
+label[name="LabelPlaceHolder"] {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: #757575;
+  font-size: 24px;
+  font-weight: 300;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.EntradaDeTexto input[type="text"]:hover,input[type="number"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="date"]:hover {
+  border-bottom: 2px solid #899299;
+}
+input:hover ~ i[name="LabelIcon"] {
+  color: #899299;
+}
+.EntradaDeTexto input[type="text"],input[type="number"], input[type="email"], input[type="password"], input[type="date"] {
+  border: none;
+  background: #fff;
+  border-bottom: 2px solid #abb4bb;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  width: 500px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.Date {
+  width: 600px;
+  position: relative;
+
+}
+div > input:focus {
+  border-bottom: 2px solid #aac246 !important;
+  transition: 1s ease;
+}
+input:focus + label[name="LabelPlaceHolder"] {
+  font-size: 12px;
+  transition: 1s ease;
+  top: 0px;
+}
+.LabelActivo {
+  font-size: 15px !important;
+  transition: 1s ease !important;
+  top: 0px !important;
+}
+input:focus ~ i[name="LabelIcon"] {
+  color: #aac246 !important;
+  transition: 1s ease;
+}
+.ComboBox {
+  width: 600px;
+  position: relative;
+}
+.ComboBox select {
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #abb4bb;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  width: 520px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.ComboBox select:focus {
+  border-bottom: 2px solid #aac246;
+  transition: 1s ease;
+}
+
+.ComboBox select:hover {
+  border-bottom: 2px solid #899299;
+}
+.ComboBox select:hover ~ i[name="LabelIcon"] {
+  color: #899299;
+}
+
+input[type="submit"],input[type="file"], input[type="button"] {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #899299;
+  border-radius: 4px;
+  background: #fff;
+  outline: none;
+  border: 2px solid #abb4bb;
+  display: block;
+  position: relative;
+  margin: 25px auto;
+  min-width: 150px;
+  width: auto;
+  height: 50px;
+}
+input[type="submit"]:active , input[type="button"]:active{
+  transition: .1s ease;
+  color: #fff !important;
+  background: #aac246;
+  border: 2px solid #aac246 !important;
+}
+input[type="submit"]:hover,, input[type="button"]:hover {
+  color: #677077;
+  border: 2px solid #899299;
+}
+
+
+.BotonesMarcables {
+  width: 600px;
+  position: relative;
+}
+.BotonesMarcables h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.BotonesMarcables label i[name="IconoOpcional"]:not {
+  font-size: 1.1em;
+  color: #899299;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+.BotonesMarcables label:hover i {
+  color: #aac246 !important;
+}
+.BotonesMarcables label {
+  display: block;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #677077;
+  cursor: pointer;
+}
+.BotonesMarcables label input {
+  visibility: hidden;
+}
+.BotonesMarcables label h4 {
+  color: #899299;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.BotonesMarcables label i[name="IconoOpcional"] {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  color: #899299;
+  left: -5px;
+}
+.BotonesMarcables input:checked ~ i {
+  transition: .2s;
+  color: #aac246;
+}
+.BotonesMarcables input:checked + i[name="CirculoBoton"]::before {
+  transition: .2s;
+  font-weight: normal;
+  content: "\f192";
+}
+.BotonesMarcables input:checked + i[name="CheckBoton"]::before {
+  transition: .2s;
+  font-weight: normal;
+  content: "\f05d";
+}
+
+.ContenedorSubirArchivo {
+  width: 600px;
+  position: relative;
+}
+.ContenedorSubirArchivo h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.ContenedorSubirArchivo input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.ContenedorSubirArchivo input + label {
+    max-width: 80%;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.ContenedorSubirArchivo input:focus + label,
+.ContenedorSubirArchivo input.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.ContenedorSubirArchivo input + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.ContenedorSubirArchivo input + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+/* style 2 */
+
+.ContenedorSubirArchivo input + label {
+    color: #899299;
+    border: 2px solid currentColor;
+}
+
+.ContenedorSubirArchivo input:focus + label,
+.ContenedorSubirArchivo input.has-focus + label,
+.ContenedorSubirArchivo input + label:hover {
+    color: #677077;
+}
+
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/*******************************************************************************
+
+  Estilos Header
+
+*******************************************************************************/
+header {
+  height: 80px;
+  width: 100%;
+  padding: 0 80px;
+  background: #272b2e;
+  border-bottom: 6px solid #aac246;
+  position: fixed;
+  z-index: 2;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+/****************************************
+  Estilo logotipo
+****************************************/
+#Logotipo {
+  cursor: pointer;
+  display: table-cell;
+  vertical-align: middle;
+  height: 80px;
+}
+#Logotipo img {
+  width: 180px;
+}
+/****************************************
+  Estilo Navegacion
+****************************************/
+#Navegacion {
+  width: auto;
+  padding: 0 0 0 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+#Navegacion ul {
+
+}
+#Navegacion ul a {
+  text-decoration: none;
+  color: #abb4bb;
+  cursor: pointer;
+}
+#Navegacion ul a li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400px;
+  font-size: 16px;
+  margin-right: 25px;
+  display: inline-block;
+}
+#Navegacion ul a:hover li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #abb4bb;
+  text-decoration: underline;
+}
+/****************************************
+  Estilo Menu Usuario
+****************************************/
+#MenuUsuario {
+  position: fixed;
+  padding: 0 10px;
+  height: 80px;
+  width: 220px;
+  top: 20px;
+  right: 10px;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 2;
+}
+#MenuUsuario > *{
+}
+#MenuUsuario ul {
+  position: absolute;
+  display: none;
+  width: 220px;
+  top: 45px;
+}
+#MenuUsuario ul li:first-child::before {
+  content: "";
+  background: #34383d;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  z-index: 1;
+  width: 230px;
+}
+#MenuUsuario ul li:first-child:hover::before {
+  background: #45494e;
+}
+#MenuUsuario ul li {
+  padding: 15px 25px;
+  background: #34383d;
+  width: 180px;
+  font-family: "Roboto", sans-serif;
+  color: #abb4bb;
+  cursor: pointer;
+}
+#MenuUsuario ul li i {
+  float: right;
+}
+#MenuUsuario ul li:hover i {
+  animation: fa-spin 0.5s 1 ;
+}
+#MenuUsuario ul li:hover {
+  background: #45494e;
+  color: #abb4bb;
+
+}
+#MenuUsuario ul li:hover {
+  background: #45494e;
+  color: #abb4bb;
+
+}
+#MenuUsuario ul li:last-child {
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+#BotonMenuUsuario {
+  background: #34383d;
+  position: inherit;
+  z-index: 2;
+  border-radius: 18px;
+  height: 31px;
+  padding: 5px;
+  width: 220px;
+  cursor: pointer;
+}
+#BotonMenuUsuario:hover {
+  background: #45494e;
+}
+#Flecha {
+  content: " ";
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  float: right;
+  border-top: 8px solid #abb4bb;
+  top: 12px;
+  right: 15px;
+}
+.RotarAbajo {
+  animation: Rotar_Abajo;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+.RotarArriba {
+  animation: Rotar_Arriba;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+#BotonMenuUsuario > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#BotonMenuUsuario div {
+  text-align: center;
+  width: 25px;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+  border: 3px solid #abb4bb;
+  background-image: url("../imgs/user.png");
+  background-size: 25px;
+  background-position: center;
+}
+#BotonMenuUsuario div img {
+  width: 50px;
+}
+#BotonMenuUsuario h2 {
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+  color: #abb4bb;
+}
+@keyframes Rotar_Abajo {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(180deg);}
+}
+@keyframes Rotar_Arriba {
+  0% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+/*******************************************************************************
+
+  Estilos Main
+
+*******************************************************************************/
+main {
+  width: 80%;
+  display: block;
+  background: #fff;
+  height: auto;
+  position: relative;
+  margin-bottom: 40px;
+  top: 86px;
+  padding: 5% 10%;
+  z-index: 1;
+  -webkit-box-shadow:0 0 40px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow:0 0 40px rgba(0, 0, 0, 0.3)  inset;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3)  inset;
+}
+/*******************************************************************************
+
+  Estilos Footer
+
+*******************************************************************************/
+footer {
+  font-size: 0px;
+  background: #272b2e;
+  height: auto;
+  width: 90%;
+  padding: 5%;
+  position: relative;
+  top: 46px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer div {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 30%;
+  height: 150px;
+  margin: 1.5%;
+
+}
+footer div  > span {
+  font-size: 28px !important;
+}
+footer div  a > span {
+  font-size: 28px !important;
+}
+footer div:first-child p {
+  margin-top: 5px;
+}
+footer div:nth-child(2) p {
+  margin-left: 15px;
+}
+footer div:nth-child(3) p {
+  margin-bottom: 20px;
+}
+footer div h5 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+footer div p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #abb4bb;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer div p span {
+  color: #3f64a7;
+  font-weight: bold;
+}
+footer div p span:hover {
+  text-decoration: underline;
+}
+footer div span i {
+  color: #34383d;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer div img {
+  width: 150px;
+}
+footer div ul {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+footer div ul li {
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 10px 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+footer div ul li:hover {
+  text-decoration: underline;
+}
+footer div ul a li {
+  border-right: 2px solid #fff;
+}
+footer div ul a:last-child li {
+  border-right: none;
+}
+span:hover .fa-square {
+  color: #565a5f !important;
+}
+span:hover .fa-circle {
+  color: #565a5f !important;
+}
+#IrArriba {
+  cursor: pointer;
+  position: fixed;
+  right: 12px;
+  bottom: 40px;
+  z-index: 3;
+  color: #272b2e;
+}
+#IrArriba:hover {
+  cursor: pointer;
+  position: fixed;
+  right: 12px;
+  bottom: 40px;
+  z-index: 3;
+  color: #494d4f;
+}

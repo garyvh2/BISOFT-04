@@ -1,0 +1,167 @@
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900");
+
+
+body {
+	background: #F9E79F;
+	margin: 0px;
+	display: inline;
+	font-family:  'Source Sans Pro', sans-serif;
+}
+p {
+	margin: 5px;
+	text-align: center;
+}
+header {
+	z-index: 3;
+	background: #922B21;
+	width: auto;
+	left: 0px;
+	right: 0px;
+	height: 65px;
+	position: fixed;
+	display: inline-flex;
+	margin: 0px;
+	box-shadow: 0px 1px 25px #641E16;
+}
+header div {
+	background: #E74C3C;
+	position: fixed;
+	display: inline-flex;
+	height: 55px;
+	left: 0px;
+	right: 0px;
+	box-shadow: 0px 1px 15px #17202A;
+}
+header div a {
+	text-decoration: none;
+	display: inline;
+}
+/* This is how you can aling 2 items inside a tag  */
+header div a img {
+	margin: 0px 8px;
+	width: auto;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block;
+}
+header div a h2 {
+	color: #17202A;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 28px;
+	vertical-align: middle;
+	margin: 0 auto;
+	width: auto;
+	text-align: center;
+	display: inline-block;
+}
+header div nav {
+	right: 2%;
+	width: 50%;
+	height: 55px;
+	position: fixed;
+}
+header div nav a {
+	width: 15%;
+	height: 36px;
+	margin-left: 3%;
+	padding: 16px 7px 0 7px;
+	text-align: center;
+	display: inline-block;
+	transition: 1.5s;
+	text-align: center;
+	color: #17202A;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 65%;
+	font-family: tahoma;
+}
+
+header div nav > a:hover {
+	background: #CB4335;
+	transition: 1s;
+	color: #1B2631;
+}
+header div nav #CurrentPage {
+
+	border-bottom: solid 4px #17202A;
+}
+main {
+	/*background: #F9E79F; */
+	/*box-shadow: 0px 1px 25px #FFF3FF; */
+	border-radius: 5px;
+	padding: 10px;
+	margin: 85px 20px 20px;
+	width: auto;
+	height: auto;
+}
+main p {
+	text-indent: 50px;
+	text-align: justify;
+	color: #17202A;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "Oxygen", sans-serif;
+}
+main h1 {
+	color: #6E2C00;
+	text-align: justify;
+}
+main img {
+	width: auto;
+	height: 300px;
+	float: right;
+	margin: 0 2%;
+}
+main ul {
+	text-align: justify;
+	font-size: 16px;
+	font-family: "Oxygen", sans-serif;
+}
+footer {
+	background: #FFF;
+	width: auto;
+	height: 100px;
+	text-align: center;
+	margin: 10px auto;
+}
+footer img {
+	position: absolute;
+	right: 0px;
+	width: auto;
+	height: 100px;
+}
+#divTable {
+	overflow-x: auto;
+}
+section div {
+	background: #F9E79F;
+	width: auto;
+	height: auto;
+	padding: 20px;
+	margin: 30px auto;
+}
+section div p {
+	font-size: 18px;
+	text-align: justify;
+}
+section div h2 {
+	vertical-align: middle;
+	text-align: center;
+	margin: 20px;
+	color: #000;
+}
+footer a {
+	width: auto;
+	height: 36px;
+	margin: 20px 5px;
+	padding: 16px 7px 0 7px;
+	text-align: center;
+	display: inline-block;
+	transition: 1.5s;
+	text-align: center;
+	color: #17202A;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}

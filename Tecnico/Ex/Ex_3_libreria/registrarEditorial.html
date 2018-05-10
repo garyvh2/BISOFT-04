@@ -1,0 +1,75 @@
+<!--****************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 11/08/2016
+  Fecha de modificacion: 11/08/2016
+
+  Proyecto de desarrollo 1 - Examen 3 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*****************************************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Librería HELIOS</title>
+    <link rel="shortcut icon" href="imgs/logo.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/registrar.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Librería HELIOS</h1>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Inicio</li></a>
+          <a href="comprar.html"><li>Comprar</li></a>
+          <a href="registrarLibro.html"><li>Registrar libros</li></a>
+          <a href="registrarTipoLibro.html"><li>Registrar tipo de libro</li></a>
+          <a href="registrarEditorial.html"><li>Registrar editoriales</li></a>
+          <a href="registrarTipoDescuento.html"><li>Registrar tipo de descuento</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Registrar editorial</h2>
+      <!--Tabla de listas -->
+      <!--Formulario de creacion de listas -->
+      <form id="formAgregarArticulo" onsubmit="return validar()">
+        <!--Conjunto para ingresar el anno de publicacion -->
+        <label for="txtCedula">Cédula jurídica</label>
+          <input type="number" name="txtCedula" id="txtCedula" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar el isbn -->
+        <label for="txtNombre">Nombre</label>
+          <input type="text" name="txtNombre" id="txtNombre" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar el titulo -->
+        <label for="txtDireccion">Dirección</label>
+          <input type="text" name="txtDireccion" id="txtDireccion" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar el autor -->
+        <label for="txtTelefono">Teléfono</label>
+          <input type="text" name="txtTelefono" id="txtTelefono" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar el anno de publicacion -->
+        <label for="txtAnnoCreacion">Año de creación</label>
+          <input type="number" name="anno" id="txtAnnoCreacion" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar el autor -->
+        <label for="txtRepresentante">Representante legal</label>
+          <input type="text" name="txtRepresentante" id="txtRepresentante" required=""  onchange="this.classList.remove('ErrorValidacion');">
+
+
+        <input type="submit" name="Agregar" value="Agregar">
+      </form>
+    </main>
+    <footer>
+      <h3>Gary Valverde Hampton</h3>
+    </footer>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/general.js"></script>
+  <script src="js/registrarEditorial.js"></script>
+</html>

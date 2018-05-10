@@ -1,0 +1,139 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 11/08/2016
+  Fecha de modificacion: 11/08/2016
+
+  Proyecto de desarrollo 1 - Examen 3 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos Generales
+
+*******************************************************************************/
+body {
+  background: #738182;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/****************************************
+  Estilo para fuentes
+****************************************/
+@font-face {
+  src: url("fonts/Myriad_Arabic/Bahij_Myriad_Arabic-Regular.ttf");
+  font-family: 'Myriad';
+}
+@font-face {
+  src: url("fonts/Rigo/Rigo-Bold.otf");
+  font-family: 'RigoB';
+}
+/****************************************
+  Estilo para formularios generales
+****************************************/
+.ErrorValidacion {
+  border: 2px solid #cc0000;
+  animation-name: Error;
+  animation-duration: .1s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes Error {
+  0% {
+    transform: translateX(5px);
+  }
+  33%{
+    transform: translateX(0px);
+  }
+  66%{
+    transform: translateX(-5px);
+  }
+  99%{
+    transform: translateX(0px);
+  }
+}
+/*******************************************************************************
+
+  Estilos header
+
+*******************************************************************************/
+header {
+  background: #B93020;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 35px 0;
+}
+/****************************************
+  Estilo para el titulo
+****************************************/
+header h1 {
+  font-family: 'RigoB';
+  font-size: 35px;
+  color: #F6FDF9;
+}
+
+/****************************************
+  Estilo para la navegacion
+****************************************/
+header nav a {
+  text-decoration: none;
+}
+header nav a li {
+  font-family: 'RigoB';
+  font-size: 15px;
+  color: #F6FDF9;
+  display: inline-block;
+  margin: 30px 15px
+}
+header nav a:hover li {
+  text-decoration: underline;
+}
+
+/*******************************************************************************
+
+  Estilos main
+
+*******************************************************************************/
+main {
+  min-height: 435px;
+  font-family: 'Myriad';
+  background: #E8E8E8;
+  width: 924px;
+  margin: 50px auto 2%;
+  height: auto;
+  border-radius: 2px;
+  padding: 10px 30px 25px;
+  position: relative;
+}
+main h2 {
+  font-family: 'RigoB';
+  text-align: center;
+  color: #363F46;
+  font-size: 26px;
+  padding: 10px 0 20px 0;
+}
+/*******************************************************************************
+
+  Estilos footer
+
+*******************************************************************************/
+footer {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 20px 0;
+}
+footer h3 {
+  font-family: 'RigoB';
+  font-size: 14px;
+  color: #F6FDF9;
+}

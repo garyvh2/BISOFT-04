@@ -1,0 +1,202 @@
+/*******************************************************************************
+
+  General Style
+
+*******************************************************************************/
+.buttons {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0ba39c;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin: 15px 0 0;
+  padding: 26px 27px 22px;
+}
+.buttons:hover {
+  background: #1fc3bc;
+}
+/*******************************************************************************
+
+  Header Style
+
+*******************************************************************************/
+header {
+  margin: 0 auto;
+  padding: 44px 0 50px;
+  width: 100%;
+  text-align: center;
+}
+header a {
+}
+header a img {
+}
+/******************
+  Nav Style
+******************/
+nav {
+  padding: 56px 0 0;
+}
+#currentPage {
+  color: #0ba39c;
+}
+.navButton {
+  padding: 0 19px;
+  display: inline-block;
+}
+.navButton a {
+  color: #000;
+  font-size: 14px;
+  font-family: "Arial Black", sans-serif;
+  text-decoration: none;
+}
+.navButton:hover a {
+  color: #0ba39c;
+}
+/*******************************************************************************
+
+  Main Style
+
+*******************************************************************************/
+main {
+    padding: 0 0 30px;
+}
+/******************
+  Banner Style
+******************/
+#banner {
+  position: relative;
+  height: 520px;
+  margin: 0 0 13px;
+}
+#banner img {
+  width: 100%;
+  height: 100%;
+}
+#bannerText {
+  width: 490px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: left;
+  margin-left: -480px;
+  margin-top: -171px;
+  padding: 0 0 0 470px;
+}
+#bannerText h2 {
+  background: #fff;
+  color: #000;
+  font-weight: normal;
+  font-size: 20px;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0 0 18px;
+  padding: 23px 27px 20px;
+}
+#bannerText p {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #252525;
+  color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  margin: 7px 0;
+  padding: 12px 27px;
+}
+/******************
+  Actores Style
+******************/
+#actores ul {
+  margin: 0 auto;
+  padding: 24px 0 0;
+  width: 980px;
+}
+#actores ul li {
+  margin: 0 10px 20px;
+  padding: 0;
+  width: 300px;
+  display: inline-block;
+}
+#actores ul li a img {
+  border: 2px solid #1a1a1a;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
+}
+/* Muy genial, no sabia esta jerarquia de selectores*/
+#actores ul li a:hover img {
+  opacity: 1;
+}
+#actores ul li a {
+  text-decoration: none;
+}
+#actores ul li a h2 {
+  padding: 33px 0 0;
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*******************************************************************************
+
+  Footer Style
+
+*******************************************************************************/
+footer {
+  padding: 36px 0 42px;
+  background: #252525;
+  width: 100%;
+  height: 44px;
+  margin-bottom: 40px;
+}
+footer div {
+  width: 71%;
+  margin: 0 auto;
+}
+footer div p {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  float: left;
+  line-height: 44px;
+  margin: 0 0 0 10px;
+}
+footer div ul {
+  float: right;
+}
+footer div ul li {
+  display: inline-block;
+  margin: 0 8px;
+}
+/******************
+  Social Style
+******************/
+.social {
+  background-size: cover;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #fff;
+}
+#twitter {
+  background-image: url("../imgs/social-twitter-passive.jpg");
+}
+#twitter:hover {
+  background-image: url("../imgs/social-twitter-active.jpg");
+}
+#facebook {
+  background-image: url("../imgs/social-facebook-passive.jpg");
+}
+#facebook:hover {
+  background-image: url("../imgs/social-facebook-active.jpg");
+}
+#google {
+  background-image: url("../imgs/social-google-passive.jpg");
+}
+#google:hover {
+  background-image: url("../imgs/social-google-active.jpg");
+}
+#pinterest {
+  background-image: url("../imgs/social-pinterest-passive.jpg");
+}
+#pinterest:hover {
+  background-image: url("../imgs/social-pinterest-active.jpg");
+}

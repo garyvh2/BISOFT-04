@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/templateUser.css">
+    <link rel="stylesheet" href="css/listarTiposEvento.css">
+
+  </head>
+  <body>
+    <header>
+      <div id="Logotipo" onclick="window.location = 'listarMisListas.html'">
+        <img src="imgs/logoblanco.png" alt="Logo" title="Logo" width="40px" height="40px"/>
+      </div>
+      <div id="Navegacion">
+        <ul id="ListaNavegacion">
+          <a href="listarTiendas.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a onclick="window.location = 'nuestrasTiendas.html'"><li>Nuestras tiendas</li></a>
+        </ul>
+      </div>
+      <div id="MenuUsuario">
+        <div id="BotonMenuUsuario">
+          <div></div>
+          <h2>Gary Valverde</h2>
+          <span id="Flecha"></span>
+        </div>
+        <ul id="ListaMenuUsuario">
+          <li onclick="window.location = 'listarMisListas.html'">Mis listas<i class="fa fa-list"></i></li>
+          <li onclick="window.location = 'listarMisReservas.html'">Mis reservaciones<i class="fa fa-lock"></i></li>
+          <li onclick="IrAlPerfil()">Perfil<i class="fa fa-user"></i></li>
+          <li onclick="CerrarSesion()">Cerrar sesión<i class="fa fa-times"></i></li>
+        </ul>
+      </div>
+    </header>
+  </header>
+    <main>
+      <h1>Escoja un tipo de evento</h1>
+      <ul id="ListaDeTiposEvento">
+      </ul>
+    </main>
+    <footer>
+      <div>
+        <img src="imgs/logoblanco.png" alt="Logo">
+        <ul>
+          <a href="listarTiendas.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a href="listarMisListas.html"><li>Mis listas</li></a>
+          <a href="listarMisReservas.html"><li>Mis reservaciones</li></a>
+        </ul>
+        <p>Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.</p>
+      </div>
+      <div>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          +(506)8601-3609
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          San José, Costa Rica
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          <span>eventoryteam@gmail.com<span>
+        </p>
+      </div>
+      <div>
+        <h5>Acerca de nosotros</h5>
+        <p>Somos una aplicación cuyo objetivo es reducir costos de tiempo y dinero en la organización de eventos de todo tipo tanto para los anfitriones como para los invitados.</p>
+        <a href="https://twitter.com/eventoryteam">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.facebook.com/eventoryteam" n>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/eventory-team-8559b3124">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://plus.google.com/u/3/104558634317851605090">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+
+    </footer>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/templateUser.js"></script>
+  <script src="js/listarTiposEvento.js"></script>
+
+  </html>

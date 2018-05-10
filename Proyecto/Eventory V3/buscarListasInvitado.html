@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Buscar lista</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/templateInvitado.css">
+  </head>
+  <body>
+    <header>
+      <div id="Logotipo" onclick="window.location = 'index.html'">
+        <img src="imgs/logoblanco.png" alt="Logo" title="Logo" width="40px" height="40px" onclick="window.location = 'index.html'"/>
+      </div>
+      <div id="Navegacion">
+        <ul id="ListaNavegacion">
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+        </ul>
+      </div>
+      <div id="MenuUsuario">
+        <div id="BotonMenuUsuario" class="ControlUsuario"onclick="window.location = 'iniciarSesion.html'">
+          <i class="fa fa-sign-in fa-inverse fa-2x"></i>
+          <h2>Iniciar sesión</h2>
+        </div>
+        <div id="BotonMenuUsuario" class="ControlUsuario" onclick="window.location = 'registrarCliente.html'">
+          <i class="fa fa-user-plus fa-inverse fa-2x"></i>
+          <h2>Registrate</h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <form onsubmit="return validar()">
+        <h1>Lista de eventos</h1>
+        <div class="Advertencia">
+           <i class="fa fa-warning"></i>
+           <p>Para poder reservar un producto de la lista deberá iniciar sesión.</p>
+        </div>
+        <div class="EntradaDeTexto">
+          <input type="text" id="txtNombreEvento" name="txtNombreEvento" required=""  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3]) " readonly>
+          <label for="txtNombreEvento" class="LabelActivo" name="LabelPlaceHolder">Nombre del evento:</label>
+           <i class="fa fa-archive fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="EntradaDeTexto">
+          <input id= "txtFechaEvento"   type="date" 					   name="txtFechaEvento"            value="" onfocusout="" readonly>
+          <label for="txtFechaEvento" class="LabelActivo"  class="LabelActivo"     name="LabelPlaceHolder">Fecha del evento:</label>
+          <i class="fa fa-calendar fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="ComboBox">
+          <label for="txtTipoEvento" class="LabelActivo"  name="LabelPlaceHolder" >Tipo de evento:</label>
+           <select id="txtTipoEvento" required="" name="txtTipoEvento" disabled="true">
+
+          </select>
+          <i class="fa fa-list-ul fa-2x" name="LabelIcon"></i>
+        </div>
+        <div class="BotonesMarcables">
+          <label>
+            <input id="chkEnvio" name="Perecedero" type="checkbox"  value="Envio" onclick="checkboxEnvio(this)" disabled="true">
+            <i class="fa fa-circle-thin" name="CheckBoton"></i>
+            <i class="fa fa-truck fa-2x" name="IconoOpcional"></i>
+            <h4>Envío</h4>
+          </label>
+        </div>
+        <div id="mapWrapper" class="MapaInactivo MapaOculto BotonesMarcables">
+          <h2>Dirección del evento</h2>
+          <div id="mapa"></div>
+        </div>
+
+      </form>
+      <h1>Productos en esta lista</h1>
+      <table id="TablaListaDeProductos" class="Tabla">
+        <thead>
+          <tr>
+            <th>Código de producto</th>
+            <th>Nombre del producto</th>
+            <th>Marca del producto</th>
+            <th>Precio del producto</th>
+            <th>Cantidad del producto</th>
+            <th>Estado del producto</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <div>
+        <img src="imgs/logoblanco.png" alt="Logo">
+        <ul>
+          <a href="listarTiendas.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a href="listarMisListas.html"><li>Mis listas</li></a>
+          <a href="listarMisReservas.html"><li>Mis reservaciones</li></a>
+        </ul>
+        <p>Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.</p>
+      </div>
+      <div>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          +(506)8601-3609
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          San José, Costa Rica
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          <span>eventoryteam@gmail.com<span>
+        </p>
+      </div>
+      <div>
+        <h5>Acerca de nosotros</h5>
+        <p>Somos una aplicacion cuyo objetivo es reducir costos de tiempo y dinero en la organización de eventos de todo tipo tanto para los anfitriones como para los invitados.</p>
+        <a href="https://twitter.com/eventoryteam">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.facebook.com/eventoryteam" n>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/eventory-team-8559b3124">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://plus.google.com/u/3/104558634317851605090">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+
+        <span id="IrArriba" class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-3x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </footer>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/templateInvitado.js"></script>
+  <script src="js/buscarListaInvitado.js"></script>
+  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZn-mYepPk1HEeRpSM7jr_WQWXn4YUqcg&callback=CargarInformacion">
+  </script>
+</html>

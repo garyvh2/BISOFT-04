@@ -1,0 +1,64 @@
+body{
+  width: 100%;
+  font-family: verdana;
+  font-size: 20px;
+}
+header{
+  background:#26ADE4;
+  padding: 15px 0;
+  margin: 0 0 30px 0;
+
+
+}
+
+header nav a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0 40px 0 0;
+}
+header nav>a{
+  margin-left: 40px;
+}
+
+h1{
+  font-size: 22px;
+  color: #4DBCE9;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+/*form styles*/
+form{
+  padding: 0 50px;
+  width: 39%;
+  float: left;
+}
+.labels,.inputs{
+  width: 50%;
+  float:left;
+  margin: 0 0 15px 0;
+}
+.labels label, .inputs input{
+  display:block;
+  margin: 0 0 20px 0;
+}
+.boton{
+  text-decoration: none;
+  color:  #000;
+  border: 2px solid  #000;
+  background: #D1E751;
+  padding: 5px;
+  display:block;
+  width:95px;
+
+}
+
+/*table styles*/
+table{
+  width:45%;
+  float:left;
+}
+.cf{
+  clear:both;
+}

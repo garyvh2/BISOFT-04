@@ -1,0 +1,128 @@
+
+html { width: 100%; height:100%; overflow:hidden; }
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	width: 100%;
+	height:100%;
+	font-family: sans-serif;
+	background: #e9e9e9;
+}
+header{
+
+}
+
+main {
+	background: #ffffff;
+	padding: 50px;
+	position: relative;
+	top: 20%;
+	display: block;
+	width:300px;
+	border-radius: 5px;
+	height:400px;
+	margin: 0 auto;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+main::before {
+	content: "";
+	color: #000;
+	border-left: 6px solid #B8DC3C;
+	position: relative;
+	top: -6px;
+	left: -98px;
+	font-size: 45px;
+
+}
+.Back {
+  text-align: center;
+	cursor: pointer;
+	height: 85px;
+	width: 110px;
+	border-radius: 60px;
+	background: #A7CB2B;
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+  padding: 20px 0 0 0;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+
+}
+#login {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+#login input {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	width: 300px;
+	padding: 5px;
+	font-size: 16px;
+	margin-bottom: 10px;
+	border: none;
+
+	border-bottom: 2px solid #B8DC3C;
+}
+a{
+	text-decoration: none;
+}
+h2{
+
+}
+#login_inferior {
+	width: 280px;
+	margin: 10px auto;
+}
+#login_inferior a {
+	font-family: 'Roboto light', sans-serif;
+	font-size: 14px;
+	color: #777;
+}
+
+#login_inferior a:hover {
+	text-decoration: underline;
+
+}
+
+#login_inferior button {
+	border-radius: 4px;
+	display: block;
+	margin: 20px auto 10px;
+	width: 200px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	padding: 10px 15px;
+	border: 2px solid #000;
+	background: #ffffff;
+	color: #000;
+	font-size: 18px;
+	transition: 1s;
+	cursor: pointer;
+}
+#login_inferior button:hover {
+	border: 2px solid #363636;
+	color: #363636;
+}
+#login_inferior button:active {
+	border: 2px solid #363636;
+	background: #363636;
+	color: #fff;
+	transition: .3s ease;
+}
+
+#botonRegistrar {
+	background: #A7CB2B !important;
+	border-color: #A7CB2B !important;
+	color: #000 !important;
+}
+#botonRegistrar:active {
+	background: #B8DC3C !important;
+	border-color: #B8DC3C !important;
+}

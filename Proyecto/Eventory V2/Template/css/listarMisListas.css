@@ -1,0 +1,95 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 11/07/2016
+  Fecha de modificacion: 11/07/2016
+
+  EVENTORY APP
+  2016
+
+  Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos Generales
+
+*******************************************************************************/
+
+#AgregarLista {
+  background: #ddf579 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0px 2px 5px rgba(255, 255, 255, 0.3) inset !important;
+}
+#AgregarLista:hover {
+  background: #cce468 !important;
+}
+#AgregarLista h3, #AgregarLista h4 {
+  font-size: 16px !important;
+}
+#ListaMisListas {
+  font-size: 0px;
+}
+#ListaMisListas a {
+
+}
+#ListaMisListas a li  {
+  cursor: pointer;
+  background-color: #eee;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 25%;
+  padding: 2.5%;
+  height: 350px;
+  margin: 1.5%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0px 10px 10px rgba(255,255,255,0.4) inset;
+}
+#ListaMisListas a:hover li {
+  background-color: #ddd;
+}
+#ListaMisListas a li h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #272b2e;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 50px;
+}
+#ListaMisListas a li h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #272b2e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#ListaMisListas a li h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #494d4f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#ListaMisListas a li h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  height: 32px;
+  font-size: 16px;
+  color: #565a5f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#ListaMisListas a li div {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../imgs/plus.png");
+}

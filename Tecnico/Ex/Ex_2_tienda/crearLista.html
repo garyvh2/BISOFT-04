@@ -1,0 +1,58 @@
+<!--****************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 26/07/2016
+  Fecha de modificacion: 26/07/2016
+
+  Proyecto de desarrollo 1 - Examen 2 parte tecnica
+  2016
+
+  Copyright (c) 2016 Copyright Gary A. Valverde Hampton All Rights Reserved.
+
+*****************************************************************************-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crear lista</title>
+    <link rel="shortcut icon" href="imgs/carrito.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/crearLista.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Lista de compras</h1>
+      <nav>
+        <ul>
+          <a href="index.html"><li>Inicio</li></a>
+          <a href="crearLista.html"><li>Crear lista</li></a>
+          <a href="desplegarLista.html"><li>Ver lista</li></a>
+          <a href="bitacoraErrores.html"><li>Bitácora de errores</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Crear lista</h2>
+      <img src="imgs/carrito.png" alt="Carrito de compras" />
+      <!--Formulario de creacion de listas -->
+      <form id="formCrearLista" onsubmit="return validar()">
+        <!--Conjunto para ingresar nombre -->
+        <label for="txtNombreLista">Nombre de la lista</label>
+          <input type="text" name="txtNombreLista" id="txtNombreLista" required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <!--Conjunto para ingresar fecha -->
+        <label for="txtFechaLista">Fecha</label>
+          <input type="date" name="txtFechaLista"  id="txtFechaLista"  required=""  onchange="this.classList.remove('ErrorValidacion');">
+        <input type="submit" name="Crear" value="Crear">
+      </form>
+    </main>
+    <footer>
+      <h3>Gary Valverde Hampton</h3>
+    </footer>
+  </body>
+  <script src="js/general.js"></script>
+  <script src="js/crearLista.js"></script>
+</html>

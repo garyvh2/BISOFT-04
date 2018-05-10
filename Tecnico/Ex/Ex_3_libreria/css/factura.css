@@ -1,0 +1,331 @@
+
+/****************************************
+  Estilo para formularios
+****************************************/
+form > *{
+  margin: 25px auto;
+}
+#mapa {
+  width: 300px;
+  height: 450px;
+  background: transparent url("../imgs/ajax-loader-green.gif") no-repeat center center;
+}
+input[type="text"],input[type="password"],input[type="number"], input[type="email"],input[type="date"] {
+  border: none;
+  background: #fff;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+	width: 90%;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+
+html { width: 100%; height:100%; overflow:hidden; }
+
+body::-webkit-scrollbar {
+	display: none;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	width: 100%;
+	height:100%;
+	overflow: auto;
+	font-family: sans-serif;
+	background: #e9e9e9;
+}
+header{
+
+}
+
+main {
+	background: #ffffff;
+	padding: 50px;
+	position: relative;
+	display: block;
+	width:800px;
+	border-radius: 5px;
+	height: auto;
+	margin: 100px auto;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 8;
+}
+main h2 {
+  margin-top: 50px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+  color: #272b2e;
+  letter-spacing: 10px;
+}
+main h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+  color: #272b2e;
+  letter-spacing: 5px;
+}
+
+.Back {
+  text-align: center;
+	cursor: pointer;
+	height: 65px;
+	width: 110px;
+	border-radius: 60px;
+	background: #A7CB2B;
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+  padding: 40px 0 0 0;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+  z-index: 9;
+
+}
+#login {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+#login h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+
+/*******************************************************************************
+
+  Factura
+
+*******************************************************************************/
+#TituloFactura {
+  font-family: "Roboto", sans-serif;
+  padding: 7.5px 10px;
+  text-align: center;
+  font-size: 20px;
+  background: #272b2e;
+  color: #fff;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#NumeroDeFactura {
+  color: #3f64a7;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+#Empresa {
+  height: 100px;
+  width: 100%;
+  font-size: 0px;
+  margin-bottom: 40px;
+}
+#Empresa div:first-child {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-align: left;
+  text-indent: 20px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+#Empresa div:last-child {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+#Empresa div:last-child div{
+  float: right;
+  width: 60%;
+	position: relative;
+  height: 100%;
+}
+#Empresa div:last-child img{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+   position: absolute;
+   left: 40%;
+   top: 50%;
+   -webkit-transform: translateY(-50%) translateX(-50%);
+
+}
+
+
+#DatosFactura {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 30px;
+}
+#DatosFactura div {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#DatosFactura table {
+  margin-left: 10%;
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  text-align: left;
+}
+#DatosFactura table tbody tr td {
+  width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: solid 1px #272b2e;
+  padding: 10px 10px;
+}
+#DatosFactura table tbody tr td:first-child {
+  border: none;
+  width: 120px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: right;
+}
+#Items {
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+	margin-bottom: 40px;
+}
+#Items table {
+  width: 100%;
+}
+#Items table thead tr th {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  width: 20%;
+  color: #fff;
+  background: #272b2e;
+  text-align: center;
+  border: 1px solid #272b2e;
+}
+#Items table tbody tr td {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: solid 1px #272b2e;
+  padding: 10px;
+  width: 20%;
+  font-size: 12px;
+  text-align: left;
+}
+
+
+
+#TotalesFactura {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 30px;
+}
+#TotalesFactura table {
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  text-align: left;
+}
+#TotalesFactura table tbody {
+  float: right;
+}
+#TotalesFactura table tbody tr {
+  width: 100%;
+}
+#TotalesFactura table tbody tr td {
+  width: 150px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: solid 1px #272b2e;
+  padding: 10px 10px;
+}
+#TotalesFactura table tbody tr td:first-child {
+  width: 240px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-align: right;
+}
+#TotalesFactura table tbody tr:last-child td:last-child {
+  background: #272b2e;
+  color: #fff;
+  height: auto;
+}
+
+@media print {
+  .Back {
+    display: none;
+  }
+  main {
+    padding: 0;
+    width: 100vw;
+    box-shadow: 0 0 0;
+  }
+}
+.Cancelar {
+  padding: 20px 35px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  background: #33373c;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.Cancelar:hover {
+  background: #11151a;
+}
+.Aceptar {
+  padding: 20px 35px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  background: #FF6C4C;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+.Aceptar:hover {
+  background: #DD4A2A;
+}
+@media print {
+  .Cancelar {
+    display:  none;
+  }
+  .Aceptar {
+    display: none;
+  }
+  main {
+  	box-shadow: none;
+    width: 100vw;
+    height: 100vh;
+  }
+  #Items table thead tr th {
+    color: #000;
+    border: 1px solid #272b2e;
+  }
+  #TotalesFactura table tbody tr:last-child td:last-child {
+    color: #000;
+  }
+}

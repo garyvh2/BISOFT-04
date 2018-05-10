@@ -1,0 +1,22 @@
+#MainDivGalery {
+  display: inline-block;
+  width: 45%;
+}
+#MainDivText {
+  padding: 10px;
+  margin: 0 auto;
+  display: inline-block;
+  width: 45%;
+
+}
+#MainDivText p {
+  color: #17202A;
+  position: relative;
+  text-align: justify;
+  font-family: tahoma;
+}
+#MainDivText h1 {
+  color: #6E2C00;
+  text-align: justify;
+  font-family: tahoma;
+}

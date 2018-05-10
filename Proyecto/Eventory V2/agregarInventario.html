@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Productos</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/templateAdmin.css">
+    <link rel="stylesheet" href="css/agregarInventario.css">
+
+  </head>
+  <body>
+    <header>
+      <div id="Logotipo" onclick="window.location = 'listarMisListasAdmin.html'">
+        <img src="imgs/logoblanco.png" alt="Logo" title="Logo" width="40px" height="40px"/>
+      </div>
+      <div id="Navegacion">
+        <ul id="ListaNavegacion">
+          <a href="listarTiendasAdmin.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a href="listarMisListasAdmin.html"><li>Mis listas</li></a>
+          <a href="listarMisReservasAdmin.html"><li>Mis reservaciones</li></a>
+        </ul>
+      </div>
+      <div id="MenuUsuario">
+        <div id="BotonMenuUsuario">
+          <div></div>
+          <h2>Gary Valverde</h2>
+          <span id="Flecha"></span>
+        </div>
+        <ul id="ListaMenuUsuario">
+          <li onclick="IrAlPerfil()">Perfil<i class="fa fa-user"></i></li>
+          <li onclick="CerrarSesion()">Cerrar sesión<i class="fa fa-times"></i></li>
+        </ul>
+      </div>
+    </header>
+    <aside>
+          <div id="FotoPerfil">
+              <div>
+                  <div id="FotoPerfilInformacion">
+                      <div id="Foto"></div>
+                      <div id="Informacion">
+                          <h4 id="TipoUsuarioInformacionPerfil">Administrador</h4>
+                          <hr>
+                          <h4 id="TiendaInformacionPerfil">Walmart</h4>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="MenuLateral">
+              <ul>
+                  <li id="Cajero" onclick="MenuLateralActivo(this.id)">
+                      <div class="BotonMenuLateral Cajero BotonMenuLateraActivo">
+                          <i class="fa fa-usd fa-2x"></i>
+                          <h3>Cajero</h3>
+                      </div>
+                      <ul class="SubMenuLateral SubMenuLateraActivo">
+                          <a href="registrarProveedor.html">
+                              <li>Pago de producto</li>
+                          </a>
+                          <a href="listarProductosAdmin.html">
+                              <li>Lista de productos</li>
+                          </a>
+                      </ul>
+                  </li>
+                  <li id="Servicio" onclick="MenuLateralActivo(this.id)">
+                      <div class="BotonMenuLateral Servicio">
+                          <i class="fa fa-volume-control-phone fa-2x"></i>
+                          <h3>Servicio al cliente</h3>
+                      </div>
+                      <ul class="SubMenuLateral">
+                          <a href="activarListas.html">
+                              <li>Activar lista</li>
+                          </a>
+                          <a href="listarProductosAdmin.html">
+                              <li>Lista de productos</li>
+                          </a>
+                          <a href="registroUsuariosPorAdministrador.html">
+                              <li>Registrar usuarios</li>
+                          </a>
+                      </ul>
+                  </li>
+                  <li id="Inventario" onclick="MenuLateralActivo(this.id)">
+                      <div class="BotonMenuLateral Inventario ">
+                          <i class="fa fa-archive fa-2x"></i>
+                          <h3>Inventario</h3>
+                      </div>
+                      <ul class="SubMenuLateral">
+                          <a href="agregarInventario.html">
+                            <li>Agregar inventario</li>
+                          </a>
+                          <a href="listarProductosAdmin.html">
+                              <li>Lista de productos</li>
+                          </a>
+                          <a href="registrarProducto.html">
+                              <li>Registrar productos</li>
+                          </a>
+                          <a href="registrarTipoProducto.html">
+                              <li>Registrar tipos de producto</li>
+                          </a>
+                      </ul>
+                  </li>
+                  <li id="Proveedores" onclick="MenuLateralActivo(this.id)">
+                      <div class="BotonMenuLateral Proveedores">
+                          <i class="fa fa-truck fa-2x"></i>
+                          <h3>Proveedores</h3>
+                      </div>
+                      <ul class="SubMenuLateral">
+                          <a href="registrarProveedor.html">
+                              <li>Registrar proveedor</li>
+                          </a>
+                          <a href="registrarTipoEvento.html">
+                              <li>Modificar datos de proveedor</li>
+                          </a>
+                          <li>Listar productos por proveedor</li>
+                      </ul>
+                  </li>
+
+                  <li id="Configuracion" onclick="MenuLateralActivo(this.id)">
+                      <div class="BotonMenuLateral Configuracion">
+                          <i class="fa fa-cog fa-2x"></i>
+                          <h3>Configuración</h3>
+                      </div>
+                      <ul class="SubMenuLateral">
+                          <li>Datos tienda</li>
+                          <a href="registroUsuariosPorAdministrador.html">
+                              <li>Registrar usuarios</li>
+                          </a>
+                          <a href="registrarConvenios.html">
+                              <li>Registrar convenios</li>
+                          </a>
+                          <a href="registrarTipoEvento.html">
+                              <li>Registrar tipos de evento</li>
+                          </a>
+                          <a href="modificarUsuarios.html">
+                              <li>Modificar datos de usuario</li>
+                          </a>
+                          <a href="registrarTipoEvento.html">
+                              <li>Modificar convenios</li>
+                          </a>
+                          <a href="registrarTipoEvento.html">
+                              <li>Modificar tipos de producto</li>
+                          </a>
+
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </aside>
+    <main>
+      <h1>Agregar productos al inventario</h1>
+      <div class="EntradaDeTexto">
+        <input type="text" id="txtBuscar" name="txtBuscar" required=""  value="" onfocusout="Validar(this.value, this.parentNode.childNodes[3])" maxlength="50">
+        <label for="txtBuscar" name="LabelPlaceHolder" >Buscar un producto:</label>
+        <i class="fa fa-search fa-2x" name="LabelIcon"></i>
+      </div class="EntradaDeTexto">
+      <div class="Informativo">
+        <i class="fa fa-info-circle"></i>
+        <p>Haga clic sobre un producto para ver su información e ingrese la cantidad deseada.</p>
+      </div>
+      <ul id="ListaDeProductos">
+      </ul>
+      <div id="MenuDeCantidad" class="MenuDeCantidadInactivo">
+        <div>
+          <div id="ImageMenuCantidad"></div>
+          <div id="BotonesCantidad">
+            <input id="restar"    type="button"    value="-">
+            <input id="cantidad"  type="number"    value="0" readonly>
+            <input id="sumar"     type="button"    value="+">
+          </div>
+        </div>
+        <div>
+          <h5 id="NombreProducto">Laptop</h5>
+          <p  id="DescripcionProducto">Una computadora portátil u ordenador portátil es un ordenador personal móvil o transportable.</p>
+        </div>
+        <div>
+          <input id="AgregarALista" type="button" value="Actualizar en inventario">
+        </div>
+        <i id="CerrarMenuCantidad" class="fa fa-times fa-2x"></i>
+      </div>
+
+
+    </main>
+    <footer>
+
+
+    </footer>
+  </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/templateAdmin.js"></script>
+  <script src="js/agregarInventario.js"></script>
+</html>

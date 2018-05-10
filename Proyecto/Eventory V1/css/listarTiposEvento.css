@@ -1,0 +1,72 @@
+/*******************************************************************************
+  Autor: Gary A. Valverde Hampton
+  Fecha de creacion: 11/07/2016
+  Fecha de modificacion: 11/07/2016
+
+  EVENTORY APP
+  2016
+
+  Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.
+
+*******************************************************************************/
+/*******************************************************************************
+
+  Estilos Generales
+
+*******************************************************************************/
+#ListaDeTiposEvento {
+  font-size: 0px;
+}
+#ListaDeTiposEvento a {
+
+}
+#ListaDeTiposEvento a li {
+  padding: 0 2.5%;
+  border: 1px solid #ddd;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: 280px;
+  margin: 1.5%;
+}
+#ImagenEvento {
+  background-image: url("../imgs/404.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 10px auto;
+  width: 100%;
+  height: 150px;
+}
+#ListaDeTiposEvento a li h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #272b2e;
+  text-align: center;
+  height: 25px;
+}
+#ListaDeTiposEvento a li h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #272b2e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#ListaDeTiposEvento a li h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #494d4f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#ListaDeTiposEvento a li h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  height: 32px;
+  font-size: 16px;
+  color: #565a5f;
+  text-align: center;
+  margin-bottom: 5px;
+}

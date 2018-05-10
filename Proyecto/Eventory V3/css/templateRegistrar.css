@@ -1,0 +1,366 @@
+
+/****************************************
+  Estilo para formularios
+****************************************/
+.required::after {
+    content: '*';
+    color: #E74C3C;
+    right: -20px;
+    top: 10px;
+    position: absolute;
+}
+
+.error {
+  border-bottom: 2px solid #E74C3C !important;
+  transition: 1s ease;
+}
+.error ~ i[name="LabelIcon"] {
+  color: #E74C3C !important;
+  transition: 1s ease;
+}
+form > *{
+  margin: 25px auto;
+}
+#mapa {
+  width: 300px;
+  height: 450px;
+  background: transparent url("../imgs/ajax-loader-green.gif") no-repeat center center;
+}
+.Date {
+  width: 300px;
+  position: relative;
+}
+.EntradaDeTexto {
+  width: 300px;
+  position: relative;
+}
+i[name="LabelIcon"] {
+  padding: 10px 0;
+  color: #abb4bb;
+  margin-right: 5px;
+  position: absolute;
+  left: -25px;
+  top: -10px;
+}
+label[name="LabelPlaceHolder"] {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  color: #757575;
+  font-size: 24px;
+  font-weight: 300;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+input[type="text"]:hover,input[type="password"]:hover,input[type="number"]:hover,input[type="date"]:hover, input[type="email"]:hover {
+  border-bottom: 2px solid #899299;
+}
+input:hover ~ i[name="LabelIcon"] {
+  color: #899299;
+}
+input[type="text"] ~ i[name="LabelIcon"],input[type="password"] ~ i[name="LabelIcon"],input[type="date"] ~ i[name="LabelIcon"],input[type="number"] ~ i[name="LabelIcon"] {
+  color: #ddd;
+}
+input[required=""] ~ i[name="LabelIcon"] {
+  color: #abb4bb;
+}
+input[type="text"],input[type="password"],input[type="number"], input[type="email"],input[type="date"] {
+  border: none;
+  background: #fff;
+  border-bottom: 2px solid #abb4bb;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  left: 20px;
+  position: relative;
+  width: 280px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+input:focus {
+  border-bottom: 2px solid #aac246 !important;
+  transition: 1s ease;
+}
+input:focus + label[name="LabelPlaceHolder"] {
+  font-size: 12px;
+  transition: 1s ease;
+  top: -15px;
+}
+.LabelActivo {
+  font-size: 15px !important;
+  transition: 1s ease !important;
+  top: -15px !important;
+	z-index: 10;
+}
+input:focus ~ i[name="LabelIcon"] {
+  color: #aac246 !important;
+  transition: 1s ease;
+}
+.ComboBox {
+  width: 350px;
+  position: relative;
+}
+.ComboBox select {
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #abb4bb;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 18px;
+  width: 300px;
+  position: relative;
+  left: -5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.ComboBox select:focus {
+  border-bottom: 2px solid #aac246;
+  transition: 1s ease;
+}
+
+.ComboBox select:hover {
+  border-bottom: 2px solid #899299;
+}
+.ComboBox select:hover ~ i[name="LabelIcon"] {
+  color: #899299;
+}
+
+input[type="submit"],input[type="file"] {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #899299;
+  border-radius: 4px;
+  background: #fff;
+  outline: none;
+  border: 2px solid #abb4bb;
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: 150px;
+  height: 50px;
+}
+input[type="submit"]:active {
+  transition: .1s ease;
+  color: #fff !important;
+  background: #aac246;
+  border: 2px solid #aac246 !important;
+}
+input[type="submit"]:hover {
+  color: #677077;
+  border: 2px solid #899299;
+}
+
+
+.BotonesMarcables {
+  width: 300px;
+  position: relative;
+}
+.BotonesMarcables h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.BotonesMarcables label i[name="IconoOpcional"]:not {
+  font-size: 1.1em;
+  color: #899299;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+.BotonesMarcables label:hover i {
+  color: #aac246 !important;
+}
+.BotonesMarcables label {
+  display: block;
+	text-align: left;
+  height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #677077;
+  cursor: pointer;
+}
+.BotonesMarcables label input {
+  visibility: hidden;
+}
+.BotonesMarcables label h4 {
+  color: #899299;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.BotonesMarcables label i[name="IconoOpcional"] {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  color: #899299;
+  left: -5px;
+}
+.BotonesMarcables input:checked ~ i {
+  transition: .2s;
+  color: #aac246;
+}
+.BotonesMarcables input:checked + i[name="CirculoBoton"]::before {
+  transition: .2s;
+  font-weight: normal;
+  content: "\f192";
+}
+.BotonesMarcables input:checked + i[name="CheckBoton"]::before {
+  transition: .2s;
+  font-weight: normal;
+  content: "\f05d";
+}
+
+.ContenedorSubirArchivo {
+  width: 300px;
+  position: relative;
+}
+.ContenedorSubirArchivo h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.ContenedorSubirArchivo input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.ContenedorSubirArchivo input + label {
+    max-width: 80%;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.ContenedorSubirArchivo input:focus + label,
+.ContenedorSubirArchivo input.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.ContenedorSubirArchivo input + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.ContenedorSubirArchivo input + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+/* style 2 */
+
+.ContenedorSubirArchivo input + label {
+    color: #899299;
+    border: 2px solid currentColor;
+}
+
+.ContenedorSubirArchivo input:focus + label,
+.ContenedorSubirArchivo input.has-focus + label,
+.ContenedorSubirArchivo input + label:hover {
+    color: #677077;
+}
+
+
+
+
+
+
+body::-webkit-scrollbar {
+	display: none;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	width: 100%;
+	height:100%;
+	overflow: auto;
+	font-family: sans-serif;
+	background: #e9e9e9;
+}
+header{
+
+}
+
+main {
+	background: #ffffff;
+	padding: 50px;
+	position: relative;
+	display: block;
+	width:300px;
+	border-radius: 5px;
+	height: auto;
+	margin: 100px auto;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+main::before {
+	content: "";
+	color: #000;
+	border-left: 6px solid #B8DC3C;
+	position: relative;
+	top: -6px;
+	left: -98px;
+	font-size: 45px;
+
+}
+.Back {
+  text-align: center;
+	cursor: pointer;
+	height: 65px;
+	width: 110px;
+	border-radius: 60px;
+	background: #A7CB2B;
+	font-size: 20px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+  padding: 40px 0 0 0;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+
+}
+#login {
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+#login h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #677077;
+  font-size: 20px;
+  margin: 20px 0;
+}

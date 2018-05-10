@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Titulo de la pagina y favicon -->
+    <title>Pabs – Latin America North – Summoner Lookup – LoLSkill</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <!-- Llamado a la hoja de estilos -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Llamado de fuentes de google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <!--************************************************************************
+
+        Seccion del header
+
+    *************************************************************************-->
+    <header>
+      <div id="LoginRegisterBar">
+        <div>
+          <a href="#0">LOGIN</a>
+          <a href="#0">CREATE ACCOUNT</a>
+        </div>
+      </div>
+      <div id="BarraNavegacionLogotipoWrapper">
+        <div id="LogotipoBar">
+          <a href="#0" id="Logo">
+            <img src="imgs/logo.png" alt="Logotipo">
+          </a>
+          <div id="Form">
+            <div id="TextInput">
+              <input type="text" name="Text" value="Pabs">
+            </div>
+            <div id="Buttons">
+              <button type="button" id="ButtonRojo" name="Game">Search Game</button>
+              <button type="button" id="ButtonAzul" name="Summoner">Search Summoner</button>
+            </div>
+          </div>
+          <div id="CurseVoice">
+            <img src="imgs/cursevoice.png" alt="CurseVoice" />
+          </div>
+        </div>
+        <div id="NavWrapper">
+          <nav>
+            <ul>
+              <a href="#0" id="FirstNav">
+                <li class="NavElement">HOME</li>
+              </a>
+              <a href="#0">
+                <li class="NavElement">TOPLISTS</li>
+              </a>
+              <a href="#0">
+                <li class="NavElement">STREAMS</li>
+              </a>
+              <a href="#0">
+                <li class="NavElement">CHAMPIONS</li>
+              </a>
+              <a href="#0">
+                <li class="NavElement">LIVE MATCHES</li>
+              </a>
+              <a href="#0">
+                <li class="NavElement">SALES</li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--************************************************************************
+
+        Seccion del main
+
+    *************************************************************************-->
+    <main>
+      <div id="MetricsTable">
+        <div id="UserWrapper">
+
+          <ul id="MostUsedChamps">
+            <li class="UsedChamp"><img src="imgs/champs/64x64/velkoz.png" alt="Velkoz"></li>
+            <li class="UsedChamp"><img src="imgs/champs/64x64/missfortune.png" alt="MF"></li>
+            <li class="UsedChamp"><img src="imgs/champs/64x64/varus.png" alt="Varus"></li>
+            <li class="UsedChamp"><img src="imgs/champs/64x64/sona.png" alt="Sona"></li>
+            <li class="UsedChamp"><img src="imgs/champs/64x64/graves.png" alt="Graves"></li>
+          </ul>
+          <img src="imgs/Pabs.png" alt="Pabs">
+          <div id="TextBox">
+            <h2>Pabs</h2>
+            <h3>Level 30     <span>Latin America North</span></h3>
+          </div>
+          <div class="CF"></div>
+          <ul id="MetricsType">
+            <li class="MetricsTypeButton"><span>Summary</span></li>
+            <li class="MetricsTypeButton"><span>Leagues</span></li>
+            <li class="MetricsTypeButton" id="CurrentType"><span>Champion Performance</span></li>
+            <li class="MetricsTypeButton"><span>Stats</span></li>
+            <li class="MetricsTypeButton"><span>Match History</span></li>
+            <li class="MetricsTypeButton"><span>Runes</span></li>
+            <li class="MetricsTypeButton"><span>Masteries</span></li>
+          </ul>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th id="Rank">Rank</th>
+              <th id="Champion">Champion</th>
+              <th id="LSS">LSS</th>
+              <th id="Perf">Perf.</th>
+              <th id="WL">W / L</th>
+              <th id="K">K</th>
+              <th id="D">D</th>
+              <th id="A">A</th>
+              <th id="CS">CS</th>
+              <th id="Gold">Gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/velkoz.png" alt="Champ">
+                <p>Vel'Koz</p>
+              </td>
+              <td>3,128</td>
+              <td class="Perf green">22.5%</td>
+              <td class="SpanCell green">
+                <p>69 / 44</p>
+                <span>61.1%</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>7.4</p>
+                <span>(-0.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.1</p>
+                <span>(-2.4)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>12.1</p>
+                <span>(+2.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>155</p>
+                <span>(+13)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13,734</p>
+                <span>(+880)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/missfortune.png" alt="Champ">
+                <p>Miss Fortune</p>
+              </td>
+              <td>2,800</td>
+              <td class="Perf green">8.3%</td>
+              <td class="SpanCell green">
+                <p>37 / 19</p>
+                <span>66.1%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>6.8</p>
+                <span>(-1.4)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.5</p>
+                <span>(-2.2)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>9.8</p>
+                <span>(+0.8)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>166</p>
+                <span>(-20)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>12,692</p>
+                <span>(-747)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/varus.png" alt="Champ">
+                <p>Varus</p>
+              </td>
+              <td>2,724</td>
+              <td class="Perf green">6.6%</td>
+              <td class="SpanCell yellow">
+                <p>27 / 31</p>
+                <span>46.6%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>6.4</p>
+                <span>(-1.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>5.4</p>
+                <span>(-1.5)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>10.5</p>
+                <span>(+1.8)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>177</p>
+                <span>(-11)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13,110</p>
+                <span>(-290)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/sona.png" alt="Champ">
+                <p>Sona</p>
+              </td>
+              <td>2,599</td>
+              <td class="Perf green">15.3%</td>
+              <td class="SpanCell yellow">
+                <p>19 / 23</p>
+                <span>45.2%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>3.6</p>
+                <span>(+0.5)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.3</p>
+                <span>(-2.2)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>14.8</p>
+                <span>(-0.0)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>21</p>
+                <span>(-2)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>10,475</p>
+                <span>(-144)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/graves.png" alt="Champ">
+                <p>Graves</p>
+              </td>
+              <td>2,417</td>
+              <td class="Perf green">22.3%</td>
+              <td class="SpanCell red">
+                <p>10 / 13</p>
+                <span>43.5%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>5.7</p>
+                <span>(-1.6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>3.6 </p>
+                <span>(-2.7)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>8.9</p>
+                <span>(+1.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>191</p>
+                <span>(+58)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13,014</p>
+                <span>(-328)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/nami.png" alt="Champ">
+                <p>Nami</p>
+              </td>
+              <td>2,335</td>
+              <td class="Perf green">15.2%</td>
+              <td class="SpanCell yellow">
+                <p>11 / 13</p>
+                <span>45.8%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>2.2</p>
+                <span>(+0.6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>3.8</p>
+                <span>(-1.4)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>15.0</p>
+                <span>(-1.3)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>15</p>
+                <span>(-0)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>9,389</p>
+                <span>(-663)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/karma.png" alt="Champ">
+                <p>Karma</p>
+              </td>
+              <td>2,291</td>
+              <td class="Perf yellow">-0.8%</td>
+              <td class="SpanCell red">
+                <p>10 / 16</p>
+                <span>38.5%</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>3.1</p>
+                <span>(-0.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>5.3</p>
+                <span>(-0.8)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>12.5</p>
+                <span>(-0.5)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>59</p>
+                <span>(-8)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>10,845</p>
+                <span>(-172)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/leona.png" alt="Champ">
+                <p>Leona</p>
+              </td>
+              <td>2,235</td>
+              <td class="Perf green">5.4%</td>
+              <td class="SpanCell red">
+                <p>9 / 14</p>
+                <span>39.1%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>2.4 </p>
+                <span>(+0.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.8 </p>
+                <span>(-1.7)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>12.1 </p>
+                <span>(-2.8)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>44 </p>
+                <span>(-5)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>9,790 </p>
+                <span>(-461)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/soraka.png" alt="Champ">
+                <p>Soraka</p>
+              </td>
+              <td>2,192</td>
+              <td class="Perf green">23.5%</td>
+              <td class="SpanCell yellow">
+                <p>8 / 8</p>
+                <span>-50.0%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>1.2 </p>
+                <span>(+0.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.8 </p>
+                <span>(-1.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>18.4 </p>
+                <span>(-3.0)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>23 </p>
+                <span>(+4)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>10,651 </p>
+                <span>(+1,065)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/lux.png" alt="Champ">
+                <p>Lux</p>
+              </td>
+              <td>2,136</td>
+              <td class="Perf yellow">3.9%</td>
+              <td class="SpanCell green">
+                <p>5 / 3</p>
+                <span>62.5%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>3.6 </p>
+                <span>(-3.2)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>5.5 </p>
+                <span>(-0.9)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>18.3 </p>
+                <span>(+7.2)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>72 </p>
+                <span>(-58)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13,206 </p>
+                <span>(+947)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/jinx.png" alt="Champ">
+                <p>Jinx</p>
+              </td>
+              <td>2,133</td>
+              <td class="Perf yellow">4.4%</td>
+              <td class="SpanCell green">
+                <p>1 / 0</p>
+                <span>100.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>4.0 </p>
+                <span>(-4.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>6.0 </p>
+                <span>(-0.7)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>12.0 </p>
+                <span>(+3.7)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>230 </p>
+                <span>(+33)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>14,982 </p>
+                <span>(+1,292)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/volibear.png" alt="Champ">
+                <p>Volibear</p>
+              </td>
+              <td>2,132</td>
+              <td class="Perf red">-14.0%</td>
+              <td class="SpanCell red">
+                <p>6 / 9</p>
+                <span>40.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>3.3 </p>
+                <span>(-3.5)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>5.5 </p>
+                <span>(-0.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>12.1 </p>
+                <span>(+2.3)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>45 </p>
+                <span>(-27)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>9,467 </p>
+                <span>(-2,722)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/lulu.png" alt="Champ">
+                <p>Lulu</p>
+              </td>
+              <td>2,117</td>
+              <td class="Perf green">29.6%</td>
+              <td class="SpanCell green">
+                <p>6 / 5</p>
+                <span>54.5%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>3.5 </p>
+                <span>(+0.9)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.2 </p>
+                <span>(-1.7)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>12.6 </p>
+                <span>(-0.7)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>124 </p>
+                <span>(+60)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>11,232 </p>
+                <span>(+614)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/malzahar.png" alt="Champ">
+                <p>Malzahar</p>
+              </td>
+              <td>2,108</td>
+              <td class="Perf yellow">3.2%</td>
+              <td class="SpanCell red">
+                <p>2 / 6</p>
+                <span>25.0%</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>6.3 </p>
+                <span>(-0.4)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>5.9 </p>
+                <span>(+0.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>10.4 </p>
+                <span>(+1.5)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>168 </p>
+                <span>(+6)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13,014 </p>
+                <span>(+328)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/ziggs.png" alt="Champ">
+                <p>Ziggs</p>
+              </td>
+              <td>2,082</td>
+              <td class="Perf yellow">-1.6%</td>
+              <td class="SpanCell yellow">
+                <p>2 / 2</p>
+                <span>50.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>5.0 </p>
+                <span>(-2.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>5.0 </p>
+                <span>(-1.5)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>10.3 </p>
+                <span>(+1.4)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>124 </p>
+                <span>(-59)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>11,609 </p>
+                <span>(-1,501)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/ahri.png" alt="Champ">
+                <p>Ahri</p>
+              </td>
+              <td>2,016</td>
+              <td class="Perf red">-14.2%</td>
+              <td class="SpanCell red">
+                <p>0 / 1</p>
+                <span>0.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>7.0 </p>
+                <span>(-0.8)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>6.0 </p>
+                <span>(-0.1)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>5.0 </p>
+                <span>(-3.7)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>160 </p>
+                <span>(-8)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>12,039 </p>
+                <span>(-719)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/nautilus.png" alt="Champ">
+                <p>Nautilus</p>
+              </td>
+              <td>2,015</td>
+              <td class="Perf yellow">1.0%</td>
+              <td class="SpanCell yellow">
+                <p>4 / 4</p>
+                <span>50.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>1.9 </p>
+                <span>(-0.9)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.0 </p>
+                <span>(-2.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>14.5 </p>
+                <span>(+1.4)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>43 </p>
+                <span>(-30)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>9,155 </p>
+                <span>(-1,439)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/taric.png" alt="Champ">
+                <p>Taric</p>
+              </td>
+              <td>2,013</td>
+              <td class="Perf yellow">4.3%</td>
+              <td class="SpanCell green">
+                <p>4 / 2</p>
+                <span>66.7%</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>1.3 </p>
+                <span>(-0.1)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>6.2 </p>
+                <span>(+0.6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>18.7 </p>
+                <span>(+3.1)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>53 </p>
+                <span>(+6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>11,444 </p>
+                <span>(+1,636)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/zyra.png" alt="Champ">
+                <p>Zyra</p>
+              </td>
+              <td>1,998</td>
+              <td class="Perf red">-13.3%</td>
+              <td class="SpanCell red">
+                <p>1 / 6</p>
+                <span>14.3%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>2.7 </p>
+                <span>(-1.3)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>6.6 </p>
+                <span>(-0.2)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>11.1 </p>
+                <span>(-0.8)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>42 </p>
+                <span>(-14)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>10,512 </p>
+                <span>(-1,077)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/morgana.png" alt="Champ">
+                <p>Morgana</p>
+              </td>
+              <td>1,993</td>
+              <td class="Perf red">-5.9%</td>
+              <td class="SpanCell red">
+                <p>1 / 2</p>
+                <span>33.3%</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.0</p>
+                <span>(+0.6)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>9.0 </p>
+                <span>(+2.5)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>13.3 </p>
+                <span>(-0.9)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>42 </p>
+                <span>(-14)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>12,693 </p>
+                <span>(+1,412)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/sivir.png" alt="Champ">
+                <p>Sivir</p>
+              </td>
+              <td>1,975</td>
+              <td class="Perf red">-20.6%</td>
+              <td class="SpanCell red">
+                <p>0 / 1</p>
+                <span>0.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>3.0 </p>
+                <span>(-3.7)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>6.0 </p>
+                <span>(-0.0)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>9.0 </p>
+                <span>(-0.6)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>181 </p>
+                <span>(-43)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>10,708 </p>
+                <span>(-3,236)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/caitlyn.png" alt="Champ">
+                <p>Caitlyn</p>
+              </td>
+              <td>1,955</td>
+              <td class="Perf yellow">-0.4%</td>
+              <td class="SpanCell red">
+                <p>1 / 3 </p>
+                <span>25.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>5.8 </p>
+                <span>(-1.3)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>5.5 </p>
+                <span>(-1.0)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>8.8 </p>
+                <span>(+0.7)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>182 </p>
+                <span>(-19)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>11,989 </p>
+                <span>(-1,412)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/tristana.png" alt="Champ">
+                <p>Tristana</p>
+              </td>
+              <td>1,925</td>
+              <td class="Perf red">-24.5%</td>
+              <td class="SpanCell red">
+                <p>0 / 3</p>
+                <span>0.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>4.7 </p>
+                <span>(-3.4)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>9.7 </p>
+                <span>(+3.4)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>7.0 </p>
+                <span>(+0.0)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>139 </p>
+                <span>(-50)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>11,090 </p>
+                <span>(-2,251)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/urgot.png" alt="Champ">
+                <p>Urgot</p>
+              </td>
+              <td>1,894</td>
+              <td class="Perf green">93.7%</td>
+              <td class="SpanCell red">
+                <p>0 / 1</p>
+                <span>0.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>2.0 </p>
+                <span>(-4.6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>0.0 </p>
+                <span>(-6.7)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>2.0 </p>
+                <span>(-5.5)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>83 </p>
+                <span>(-85)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>5,847 </p>
+                <span>(-6,537)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/blitzcrank.png" alt="Champ">
+                <p>Blitzcrank</p>
+              </td>
+              <td>1,769</td>
+              <td class="Perf red">-20.8%</td>
+              <td class="SpanCell red">
+                <p>0 / 1</p>
+                <span>0.0%</span>
+              </td>
+              <td class="SpanCell red">
+                <p>1.0 </p>
+                <span>(-1.6)</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>7.0 </p>
+                <span>(+0.6)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>15.0 </p>
+                <span>(+1.3)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>34 </p>
+                <span>(-12)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>8,313 </p>
+                <span>(-1,882)</span>
+              </td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td class="ChampCell">
+                <img src="imgs/champs/32x32/braum.png" alt="Champ">
+                <p>Braum</p>
+              </td>
+              <td>1,768</td>
+              <td class="Perf red">-11.5%</td>
+              <td class="SpanCell yellow">
+                <p>1 / 1</p>
+                <span>50.0%</span>
+              </td>
+              <td class="SpanCell yellow">
+                <p>1.5 </p>
+                <span>(-0.0)</span>
+              </td>
+              <td class="SpanCell green">
+                <p>4.5 </p>
+                <span>(-1.3)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>13.0 </p>
+                <span>(-2.7)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>12 </p>
+                <span>(-32)</span>
+              </td>
+              <td class="SpanCell red">
+                <p>6,042 </p>
+                <span>(-3,845)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="ChampsSidebar">
+        <div id="FreeToPlayWrapper">
+          <h2>Free To Play Champions</h2>
+          <ul id="FreeToPlayList">
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/ashe.png" alt="ashe"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/blitzcrank.png" alt="blitzcrank"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/corki.png" alt="corki"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/ekko.png" alt="ekko"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/heimerdinger.png" alt="heimerdinger"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/khazix.png" alt="khazix"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/rengar.png" alt="rengar"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/riven.png" alt="riven"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/taric.png" alt="taric"></li>
+            <li class="FreeToPlay"><img src="imgs/champs/48x48/yasuo.png" alt="yasuo"></li>
+          </ul>
+        </div>
+        <div id="ChampionSkinSalesWrapper">
+          <h2>Champion & Skin Sales</h2>
+          <ul class="ChampionSkinSalesList">
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/diana_0.jpg" alt="">
+              <div>
+                <h4>487</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/wukong_0.jpg" alt="">
+              <div>
+                <h4>440</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/corki_0.jpg" alt="">
+              <div>
+                <h4>395</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/janna_0.jpg" alt="">
+              <div>
+                <h4>292</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+          </ul>
+          <hr>
+          <ul class="ChampionSkinSalesList">
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/lux_6.jpg" alt="">
+              <div>
+                <h4>675</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/brand_3.jpg" alt="">
+              <div>
+                <h4>487</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/vi_3.jpg" alt="">
+              <div>
+                <h4>375</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <li class="ChampionSkinSale">
+              <img src="imgs/champs/skins/fiddlesticks_1.jpg" alt="">
+              <div>
+                <h4>260</h4>
+                <img src="imgs/rp_16.png" alt="rp_16">
+              </div>
+            </li>
+            <p>28th June 2016 - 1st July 2016</p>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!--************************************************************************
+
+        Seccion del footer
+
+    *************************************************************************-->
+    <footer>
+      <p>
+        © 2016 LoLSkill.net · <span>About LoLSkill</span> · <span>Contact Us</span> · <span>FAQ</span> · <span>Privacy Policy</span> ·
+      </p>
+      <img src="imgs/facebook.png" alt="Facebook" />
+      <img src="imgs/twitter.png" alt="Twitter" />
+    </footer>
+  </body>
+</html>

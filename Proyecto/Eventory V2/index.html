@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+	<title>Eventory</title>
+  <link rel="shortcut icon" href="imgs/favicon.ico">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+  <script src="js/sweetalert-master/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="js/sweetalert-master/dist/sweetalert.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/stylehome.css">
+ </head>
+	<body>
+  	<header>
+  		<img id="eventorylogo" src="imgs/logoblanco.png" alt= "logo">
+   		<div id="nav-wrap">
+  	  		<nav>
+  				<a href="iniciarSesion.html">Login</a>
+  				<a href="nuestrasTiendasInvitado.html">Tiendas</a>
+  				<a href="#">Proveedores</a>
+  				<a id="boton-verde" href="#" onclick="BuscarLista()">Buscar evento</a>
+  			</nav>
+  		</div>
+          <div id="icons-wrap">
+            <h1 id="branding"> Lo que quieres de donde quieres </h1>
+        <a href="registrarCliente.html" class="boton1">Crear lista </a>
+        <a href="registrarAdministrador.html" class="boton1">Crear tienda </a>
+        <a id="boton2" href="#" onclick="BuscarLista()" class="boton1">Buscar evento</a>
+      </div>
+    </header>
+    <main>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">+</a>
+        <div class="overlay-content">
+             <video id="events1" width="640" height="360" controls >
+                <source src="imgs/EPromo.mp4" type="video/mp4"/>
+             </video>
+        </div>
+      </div>
+      <div style="position:fixed; top: 15px; left: 15px;">
+        <span class="fa-stack fa-lg" style="font-size:35px;cursor:pointer;" onclick="openNav()">
+          <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+          <i class="fa fa-pied-piper fa-stack-1x "></i>
+        </span>
+      </div>
+
+        <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+
+      <div id="informativa">
+        <div id="letters">
+          <h2 id="head" >Hacemos su listas de manera rápida y fácil</h2>
+          <p id="regalos-parrafo">
+            “Abra su lista online con la fecha del evento que quiere celebrar y empiece a recibir regalos.”
+          </p>
+        </div>
+          <div id="events">
+             <video id="events" width="640" height="360" controls autoplay  loop >
+                <source src="imgs/videv.mp4" type="video/mp4"/>
+             </video>
+          </div>
+      </div>
+
+      <div id="informativa">
+        <div id="letters">
+          <h2 id="head" >¿Tiene un momento especial para celebrar?</h2>
+          <p id="card-parrafo">
+             Elija de nuestra gran variedad de productos, los que más le gusten. Regístrese y listo.
+          </p>
+
+          </div>
+
+            <img id="brands"src="imgs/tiendass.png" alt="brand">
+
+        </div>
+      </div>
+
+
+  		<div id="line-footer">
+  		</div>
+    </main>
+
+
+    <footer>
+      <div>
+        <img src="imgs/logoblanco.png" alt="Logo">
+        <ul>
+          <a href="listarTiendas.html"><li>Crear lista</li></a>
+          <a onclick="BuscarLista()"><li>Buscar lista</li></a>
+          <a href="listarMisListas.html"><li>Mis listas</li></a>
+          <a href="listarMisReservas.html"><li>Mis reservaciones</li></a>
+        </ul>
+        <p id="copyright">Copyright (c) 2016 Copyright EVENTORY All Rights Reserved.</p>
+      </div>
+      <div>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          +(506)8601-3609
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          San José, Costa Rica
+        </p>
+        <br>
+        <span class="fa-stack fa-lg circulos">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+        <p>
+          <span>eventoryteam@gmail.com<span>
+        </p>
+      </div>
+      <div>
+        <h5 id="acerca">Acerca de nosotros</h5>
+        <p id="somos">Somos una aplicación cuyo objetivo es reducir costos de tiempo y dinero en la organización de eventos de todo tipo tanto para los anfitriones como para los invitados.</p>
+        <a href="https://twitter.com/eventoryteam">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.facebook.com/eventoryteam" n>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://www.linkedin.com/in/eventory-team-8559b3124">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="https://plus.google.com/u/3/104558634317851605090">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+
+        <span id="IrArriba" class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x fa-3x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ </body>
+</html>
